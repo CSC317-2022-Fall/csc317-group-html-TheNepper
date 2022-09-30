@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Account</title>
+</head>
+<body>
+	<table align="center" cellpadding="20">
+		<tr>
+			<th width="100"><img src="images/logo.jpg" alt="logo image" width="150" height="100"></th>
+			<th width="100"><a href="index.html"><font size="6">Menu</font></th>
+			<th width="100"><a href="location.html"><font size="6">Location</font></th>
+			<th width="100"><a href="about.html"><font size="6">About</font></th>
+			<th width="100"><a href="faq.html"><font size="6">FAQ</font></th>
+			<th width="100"><a href="checkout.html"><font size="6">Checkout</font></th>
+			<th width="100"><a href="account.html"><font size="6">Account</font></th>
+		</tr>
+	</table>
+	<hr>
+
+	<h2 align="center">Account Settings</h2>
+	<hr>
+
+	<table align="center">
+		<tr>
+			
+			<td><form>
+				<legend><h3>Personal Information</h3></legend>
+				<fieldset>
+				<table align="center">
+				<tr>
+				<th>	
+                <label for="picture"> Profile Picture</label><br>
+				<img src="images/User.png" alt="user" width="100" height="100"><br>
+				Change: <input type="file" id="picture" name="picture"></th>
+			    </tr>
+			</table>
+
+				<br>
+				<br>
+				<table cellpadding="10">
+					<tr>
+						<th> <label for="fname"> Frist Name </label></th>
+						<th> <label for="lname"> Last Name </label> </th>
+					</tr>
+					<tr>
+						<th><input type="text" id="fname" name="fname"  required></th>
+						<th><input type="text" id="lname" name="lname" required></th>
+					</tr>		
+                    <tr>
+                    	<th><label for="birthday">Birthday: </th>
+						<th><input type="date" id="birthday" name="birthday" required></th>
+					</tr>
+
+					<tr>
+						<th><label for="email"> Email: </label></th>
+						<th><input type="email" id="email" name="email" placeholder="*****@gmail.com" required></th>
+					</tr>
+					<tr>
+					   <th><label for="tel"> Phone: </label></th>
+					   <th><input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="123-456-7890" required></th>
+					</tr>
+					<div>
+					<tr>
+						<th><label for="streetaddress">Street Address:</label></th>
+						<th><input type="text" id="streetaddress" name="streetaddress" required></th>
+					</tr>
+					<tr>
+						
+					    <th><label for="city">City:</label></th>
+					    <th><input type="text" id="city" name="city" required></th>
+					</tr>
+					<tr>
+						<th><label for="state">State:</label>
+							<select name="state" id="state">
+                            <option value="Alabama">Alabama</option>
+                            <option value="Alaska">Alaska</option>
+                            <option value="Arizona">Arizona</option>
+                            <option value="Arkansas">Arkansas</option>
+                            <option value="California">California</option>
+                            <option value="Colorado">Colorado</option>
+                            <option value="Connecticut">Connecticut</option>
+                            <option value="Delaware">Delaware</option>
+                            <option value="Florida">Florida</option>
+                            <option value="Georgia">Georgia</option>
+                            <option value="Hawaii">Hawaii</option>
+                            <option value="Idaho">Idaho</option>
+                            <option value="Illinois">Illinois</option>
+                            <option value="Indiana">Indiana</option>
+                            <option value="Iowa">Iowa</option>
+                            <option value="Kansas">Kansas</option>
+                            <option value="Kentucky">Kentucky</option>
+                            <option value="Louisiana">Louisiana</option>
+                            <option value="Maine">Maine</option>
+                            <option value="Maryland">Maryland</option>
+                            <option value="Massachusetts">Massachusetts</option>
+                            <option value="Michigan">Michigan</option>
+                            <option value="Minnesota">Minnesota</option>
+                            <option value="Mississippi">Mississippi</option>
+                            <option value="Missouri">Missouri</option>
+                            <option value="Montana">Montana</option>
+                            <option value="Nebraska">Nebraska</option>
+                            <option value="Nevada">Nevada</option>
+                            <option value="NewHampshire">New Hampshire</option>
+                            <option value="NewJersey">New Jersey</option>
+                            <option value="NewMexico">New Mexico</option>
+                            <option value="NewYork">New York</option>
+                            <option value="NorthCarolina">North Carolina</option>
+                            <option value="NorthDakota">North Dakota</option>
+                            <option value="Ohio">Ohio</option>
+                            <option value="Oklahoma">Oklahoma</option>
+                            <option value="Oregon">Oregon</option>
+                            <option value="Pennsylvania">Pennsylvania</option>
+                            <option value="RhodeIsland">Rhode Island</option>
+                            <option value="SouthCarolina">South Carolina</option>
+                            <option value="SouthDakota">South Dakota</option>
+                            <option value="Tennessee">Tennessee</option>
+                            <option value="Texas">Texas</option>
+                            <option value="Utah">Utah</option>
+                            <option value="Vermont">Vermont</option>
+                            <option value="Virginia">Virginia</option>
+                            <option value="Washington">Washington</option>
+                            <option value="WestVirginia">West Virginia</option>
+                            <option value="Wisconsin">Wisconsin</option>
+                            <option value="Wyoming">Wyoming</option>
+                            </select>
+                        </th>
+                         <th>
+                         <label for="zipcode">ZipCode:</label>
+                        <input type="tel" id="zipcode" name="zipcode" placeholder="12345" pattern="[0-9]{5}"" required><br>
+                       </th>
+                      </tr> 
+					    	
+                 </table>	   
+				
+				<br>
+				<table align="center">
+                  <tr>
+                  	<th><input type="submit" value="Change"></th>
+                  </tr>
+                  </table>	
+			</fieldset>
+		</form>
+			<br>
+			<br>
+
+        <form>
+			<legend><h3>Password Setting</h3></legend>
+				<fieldset>
+					<table cellpadding="10">
+						<tr>
+							<th><label for="account">Account Number:</label></th>
+							<td>000001</td>
+						</tr>
+						<tr>
+							<th><label for="username">User Name:</label></th>
+							<th><input type="text" id="username" name="username" required></th>
+						<tr>
+						     <th><label for="Password">Password:</label></th>
+						     <th><input type="password" id="Password" name="Password" placeholder="********" required></th>
+						</tr>
+					</table>
+					<table align="center">
+                  <tr>
+                  	<th><input type="submit" value="Change"></th>
+                  </tr>
+                  </table>		     	
+				</fieldset>
+		</form>	
+
+	
+
+
+		 
+</body>
+</html>
