@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Crazy Burger</title>
+	<title>Crazy Burger - Checkout</title>
 </head>
 <body>
 
@@ -20,30 +20,54 @@
 		</tr>
 	</table>
 	<hr>
-    <table align ="center">
-        <form>
-                <article>
-                <h4>Item 1</h4>
-                <p>Item description here</p>
-            </article>
-            <br>
-            <article>
-                <h4>Item 1</h4>
-                <p>Item description here</p>
-            </article>
-            <br>
-            <article>
-                <h4>Item 1</h4>
-                <p>Item description here</p>
-            </article>
-            <br>
+    <table align="center">
+		<tr>
+			
+			<td><form>
+				<fieldset>
+                    <h3 align = "center"><u>Cart</u></h3>
+                    <hr>
+				<table cellpadding="10">
+					<tr>
+						<article>
+                            <h4>Item 1</h4>
+                            <p>Item description here</p>
+                        </article>
+                        <hr>
+					</tr>
+					<tr>
+						<article>
+                            <h4>Item 2</h4>
+                            <p>Item description here</p>
+                        </article>
+                        <hr>
+					</tr>		
+                    <tr>
+                    	<article>
+                            <h4>Item 3</h4>
+                            <p>Item description here</p>
+                        </article>
+                        <hr>
+					</tr>
 
-            <article>
-                <h4>Item 1</h4>
-                <p>Item description here</p>
-            </article>
-            <input type="submit" value = "Checkout">
-        </form>
-    </table>
+					<tr>
+						<article>
+                            <h4>Item 4</h4>
+                            <p>Item description here</p>
+                        </article>
+                        <hr>
+					</tr>
+                    <input type="radio" id="delivery" name="delivery option" value="delivery" required>
+                    <label for="delivery">Delivery</label>
+                    <input type="radio" id="pickup" name="delivery option" value="pickup" required>
+                    <label for="pickup">Pickup</label>
+				</table> </fieldset>	
+               
+                        <input type="submit" value = "Checkout">
+    </table>	
+                
+                 
+                </form>
+    
 
     </body>
