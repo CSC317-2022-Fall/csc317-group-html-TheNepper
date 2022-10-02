@@ -57,13 +57,28 @@
                         </article>
                         <hr>
 					</tr>
+                    <label for="location">Store location:</label>
+                        <select name="location" id="location" required>
+                        <option value="Los Angeles">Los Angeles</option>
+                        <option value="San Francisco">San Francisco</option>
+                        <option value="New York">New York</option>
+                        </select>
                     <input type="radio" id="delivery" name="delivery option" value="delivery" required>
                     <label for="delivery">Delivery</label>
                     <input type="radio" id="pickup" name="delivery option" value="pickup" required>
                     <label for="pickup">Pickup</label>
-				</table> </fieldset>	
+                    <hr>
+                    <tr>
+                        <th><label for="card number"> Card #:</label></th>
+                        <th><input type="text" id="card number" name="card number" pattern="[0-9]{16}" placeholder="0000 0000 0000 0000" required></th>	
+                </tr>
+                <tr>
+                   <th><label for="csv"> csv:</label></th>
+                   <th><input type="text" id="csv" name="csv" pattern="[0-9]{3}" placeholder="***" required></th>	
+                    
+				</table> </fieldset>
                
-                        <input type="submit" value = "Checkout">
+                <input type="submit" value = "Checkout">
     </table>	
                 
                  
