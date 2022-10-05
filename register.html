@@ -3,12 +3,12 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Crazy Burger - Account</title>
+	<title>Register Form</title>
 </head>
 <body>
-
 	<!-- nav -->
-	<table align="center" cellpadding="20">
+	
+	<table align="center" cellpadding="20" >
 		<tr>
 			<th width="100"><a href="index.html"><img src="images/logo.jpg" alt="logo image" width="150" height="100"></a></th>
 			<th width="100"><a href="index.html"><font size="6">Menu</font></th>
@@ -17,32 +17,22 @@
 			<th width="100"><a href="faq.html"><font size="6">FAQ</font></th>
 			<th width="100"><a href="checkout.html"><font size="6">Checkout</font></th>
 			<th width="100"><a href="account.html"><font size="6">Account</font></th>
-                        <th width="100"><a href="login.html"><img src="images/login.png" alt="login" height="50" width="50"></th>
+			<th width="100"><a href="login.html"><img src="images/login.png" alt="login" height="50" width="50"></th>
+			
 		</tr>
 	</table>
 	<hr>
 
-	<!-- page content -->
-	<h2 align="center">Account Settings</h2>
+	<h2 align="center">Registeration Form</h2>
 	<hr>
 
 	<table align="center">
 		<tr>
 			
-			<td><form>
+			<td><form action="success.html">
 				<legend><h3>Personal Information</h3></legend>
 				<fieldset>
-				<table align="center">
-				<tr>
-				<th>	
-                <label for="picture"> Profile Picture</label><br>
-				<img src="images/User.png" alt="user" width="100" height="100"><br>
-				Change: <input type="file" id="picture" name="picture"></th>
-			    </tr>
-			</table>
-
-				<br>
-				<br>
+				
 				<table cellpadding="10">
 					<tr>
 						<th> <label for="fname"> First Name </label></th>
@@ -139,24 +129,16 @@
                  </table>	   
 				
 				<br>
-				<table align="center">
-                  <tr>
-                  	<th><input type="submit" value="Change"></th>
-                  </tr>
-                  </table>	
+				
 			</fieldset>
-		</form>
+		
 			<br>
 			<br>
 
-        <form>
-			<legend><h3>Password Setting</h3></legend>
+        
+			<legend><h3>User Name and Password setting</h3></legend>
 				<fieldset>
 					<table cellpadding="10">
-						<tr>
-							<th><label for="account">Account Number:</label></th>
-							<td>000001</td>
-						</tr>
 						<tr>
 							<th><label for="username">User Name:</label></th>
 							<th><input type="text" id="username" name="username" required></th>
@@ -167,11 +149,11 @@
 					</table>
 					<table align="center">
                   <tr>
-                  	<th><input type="submit" value="Change"></th>
+                  	<th><input type="submit" value="Submit"></th>
                   </tr>
                   </table>		     	
 				</fieldset>
 		</form>	
- 
+
 </body>
 </html>
