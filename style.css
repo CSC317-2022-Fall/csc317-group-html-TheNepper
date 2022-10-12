@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Open+Sans:wght@500&display=swap');
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	font-family: 'Montserrat', sans-serif;
+}
+
+.nav_flexbox {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 0.1% 10%;
+	position: sticky;
+	top: 0;
+	background-color: white;
+	border-style: solid;
+	border-width: 0 0 1px 0;
+}
+
+li, a, button {
+	font-size: 20px;
+	text-decoration: none;
+	list-style: none;
+}
+
+.nav_links li {
+	display: inline-block;
+	padding: 0 1em;
+}
+
+.nav_links li a, .menu_flexbox a {
+	transition: all 0.3s ease 0s;
+}
+
+.nav_links li a:hover {
+	background-color: black;
+	color: white;
+}
+
+button {
+	padding: 0.5em 1em;
+	color: white;
+	background-color: rgba(255, 51, 51, 1);
+	border: none;
+	border-radius: 2em;
+	cursor: pointer;
+	transition: all 0.3s ease 0s;
+}
+
+button:hover {
+	background-color: rgba(255, 51, 51, 0.8);
+}
+
+h1 {
+	display: flex;
+	padding: 0.5em;
+	justify-content: center;
+	background-image: radial-gradient(white, orangered);
+}
+
+.logo {
+	width: 100px;
+}
+
+.product_pic {
+	width: 300px;
+}
+
+.menu_flexbox {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	padding: 5% 15%;
+	gap: 50px;
+	background-color: white;
+	border-style: solid;
+	border-width: 0 0 1px 0;
+}
+
+.menu_flexbox a:hover {
+	color: rgba(255, 51, 51, 0.8);
+}
+
+.product_page_grid {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	fo
+}
+
+.product_page_grid div img {
+	max-width: 100%;
+    height: auto;
+}
+
+.product_page_grid div h2 {
+	font-size: 20;
+	padding: 20% 10% 0 10%;
+}
+
+.product_page_grid div h3 {
+	font-size: 30;
+	padding: 5% 10% 0 10%;
+}
+
+.product_page_grid div p {
+	font-family: 'Open Sans', sans-serif;
+	font-size: 20;
+	padding: 5% 10%;
+}
+
+.product_page_grid div ul {
+	padding: 0 10%;
+}
+
+.product_page_grid div ul li {
+	font-family: 'Open Sans', sans-serif;
+	font-size: 20;
+}

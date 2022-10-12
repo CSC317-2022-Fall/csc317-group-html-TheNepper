@@ -4,52 +4,52 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Crazy Burger Bouncy Burger</title>
+	<link rel="stylesheet" type="text/css" href="../style.css">
 </head>
 <body>
 
-	<!-- nav -->
-	<table align="center" cellpadding="20">
-		<tr>
-			<th width="100"><a href="../index.html"><img src="../images/logo.jpg" alt="logo image" width="150" height="100"></a></th>
-			<th width="100"><a href="../index.html"><font size="6">Menu</font></th>
-			<th width="100"><a href="../location.html"><font size="6">Location</font></th>
-			<th width="100"><a href="../about.html"><font size="6">About</font></th>
-			<th width="100"><a href="../faq.html"><font size="6">FAQ</font></th>
-			<th width="100"><a href="../checkout.html"><font size="6">Checkout</font></th>
-			<th width="100"><a href="../account.html"><font size="6">Account</font></th>
-                        <th width="100"><a href="../login.html"><img src="../images/login.png" alt="login" height="50" width="50"></th>
-		</tr>
-	</table>
-	<hr>
+	<!-- nav bar -->
+	<header class="nav_flexbox">
+		<a href="index.html"><img class="logo" src="../images/logo.png" alt="logo"></a>
+		<nav>
+			<ul class="nav_links">
+				<li><a href="../index.html">Menu</a></li>
+				<li><a href="../about.html">About</a></li>
+				<li><a href="../contact.html">Contact</a></li>
+				<li><a href="../location.html">Location</a></li>
+				<li><a href="../account.html">Account</a></li>
+			</ul>
+		</nav>
+		<a class="nav_links" href="cart.html"><button>Cart</button></a>
+	</header>
+	<!-- nav bar end -->
 
-	<!-- page content -->
-	<table>
-		<tr>
-			<td><img src="../images/burger1.jpg" width="960"></td>
-			<td align="left" valign="top">
-				<h1>Bouncy Burger</h1>
-				<p><font size="5">
-					The Bouncy Burger grants the power of being super bouncy. The person is able to bounce around like a bouncy ball. Bouncing too much might lead to pain and discomfort.
-					<br><br><i>
-					The meat is enchanted by a bouncy magic spell. It is extremely chewy and the meat is bouncy.</i></font>
-					<br><br>
-					Serving Size: 1 Burger<br>
-					Calories: 500<br>
-					Fat: 20g<br>
-					Cholesterol: 50mg<br>
-					Sodium: 1000mg<br>
-					Carbs: 50g<br>
-					Fiber: 2g<br>
-					Sugar: 5g<br>
-					Protein: 20g<br>
-					<br>
-					$1000
-				</p>
-				<button>Add to Cart</button>
-			</td>
-			<td width="400"></td>
-		</tr>
-	</table>
+	<main class="product_page_grid">
+		<div class="item1">
+			<img class="big_product_pic" src="../images/product1.png" alt="burger">
+		</div>
+		<div class="item2">
+			<h2>Bouncy Burger</h2>
+			<p>
+				This burger allows the eater to become extremely bouncy. The skin's physical properties change into that of a bouncy ball. The body gains minor pain and blunt resistance. The drawback is that bouncing with great force may cause harm to the eater and their surroundings.
+			</p>
+			<ul>
+				<li>Serving Size: 1 Burger</li>
+				<li>Calories: 500</li>
+				<li>Fat: 20g</li>
+				<li>Cholesterol: 50mg</li>
+				<li>Sodium: 1000mg</li>
+				<li>Carbs: 50g</li>
+				<li>Fiber: 2g</li>
+				<li>Sugar: 5g</li>
+				<li>Protein: 20g</li>
+			</ul>
+			<h3>
+				$999.99
+			<h3>
+			<a href="cart.html"><button>Add to Cart</button></a>
+		</div>
+	</main>
 
 </body>
 </html>

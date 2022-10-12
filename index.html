@@ -3,169 +3,124 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Crazy Burger</title>
+	<title>Nav Demo</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
 
-	<!-- nav -->
-	<table align="center" cellpadding="20">
-		<tr>
-			<th width="100"><a href="index.html"><img src="images/logo.jpg" alt="logo image" width="150" height="100"></a></th>
-			<th width="100"><a href="index.html"><font size="6">Menu</font></th>
-			<th width="100"><a href="location.html"><font size="6">Location</font></th>
-			<th width="100"><a href="about.html"><font size="6">About</font></th>
-			<th width="100"><a href="faq.html"><font size="6">FAQ</font></th>
-			<th width="100"><a href="checkout.html"><font size="6">Checkout</font></th>
-			<th width="100"><a href="account.html"><font size="6">Account</font></th>
-			<th width="100"><a href="login.html"><img src="images/login.png" alt="login" height="50" width="50"></th>	
-		</tr>
-	</table>
-	<hr>
+	<!-- nav bar -->
+	<header class="nav_flexbox">
+		<a href="index.html"><img class="logo" src="images/logo.png" alt="logo"></a>
+		<nav>
+			<ul class="nav_links">
+				<li><a href="index.html">Menu</a></li>
+				<li><a href="about.html">About</a></li>
+				<li><a href="contact.html">Contact</a></li>
+				<li><a href="location.html">Location</a></li>
+				<li><a href="account.html">Account</a></li>
+			</ul>
+		</nav>
+		<a class="nav_links" href="cart.html"><button>Cart</button></a>
+	</header>
+	<!-- nav bar end -->
 
-	<!-- page content -->
-	<table>
-		<tr>
-			<td width="480"></td>
-			<td width="1120" align="center">
-				<h1><font size="7">Crazy Burger</font></h1>
-				<p align="center"><font size="5">
-					Welcome to Crazy Burger!<br><br>
-					Each burger comes with two 1/4 lb juicy patties - cooked medium and served on a freshly baked bun with lettuce, tomato, red onion, and Crazy Sauce!<br>
-					Each burger grants a unique power upon consumption that lasts 1 hour.<br><br>
-					Here is our menu.</font>
-				</p>
-			</td>
-			<td width="480"></td>
-		</tr>
-	</table>
-	<hr>
+	<h1>Crazy Burger Menu</h1>
 
 	<!-- menu -->
-	<table align="center" cellpadding="20" cellspacing="20">
-		<!-- row 1 (featherfall, gills, gravity) -->
-		<tr align="center" valign="top">
-			<td width="400" height="500">
-				<a href="products/featherfall.html">
-				<img src="images/burger1.jpg" alt="burger image" width="400" height="300"></a>
-				<h2>Featherfall</h2>
-				<font size="5">- Fall slowly -<br>
-					Force of gravity is reduced while falling. Fall almost 3x slower.
-				</font><br><br>
-				<button>Add to Cart</button>
-			</td>
-			<td width="400" height="500">
-				<a href="products/gills.html">
-				<img src="images/burger1.jpg" alt="burger image" width="400" height="300"></a>
-				<h2>Gills</h2>
-				<font size="5">- Breathe fishly -<br>
-					Breathe underwater, but cannot breathe normal air.
-				</font><br><br>
-				<button>Add to Cart</button>
-			</td>
-			<td width="400" height="500">
-				<a href="products/gravity.html">
-				<img src="images/burger1.jpg" alt="burger image" width="400" height="300"></a>
-				<h2>Gravity</h2>
-				<font size="5">- Reverse gravity -<br>
-					Fall towards space. Staying indoors is recommended.
-				</font><br><br>
-				<button>Add to Cart</button>
-			</td>
-		</tr>
-		<!-- row 2 (invisible, nightowl, teleport) -->
-		<tr align="center" valign="top">
-			<td width="400" height="500">
-				<a href="products/invisible.html">
-				<img src="images/burger1.jpg" alt="burger image" width="400" height="300"></a>
-				<h2>Invisible</h2>
-				<font size="5">- Vanish -<br>
-					Clothing can still be seen. Be naked if full invisibility is preferred.
-				</font><br><br>
-				<button>Add to Cart</button>
-			</td>
-			<td width="400" height="500">
-				<a href="products/nightowl.html">
-				<img src="images/burger1.jpg" alt="burger image" width="400" height="300"></a>
-				<h2>Nightowl</h2>
-				<font size="5">- Night vision -<br>
-					See better in the dark, worse in the light. Eyes are light sensitive.
-				</font><br><br>
-				<button>Add to Cart</button>
-			</td>
-			<td width="400" height="500">
-				<a href="products/teleport.html">
-				<img src="images/burger1.jpg" alt="burger image" width="400" height="300"></a>
-				<h2>Teleport</h2>
-				<font size="5">- Random Warp -<br>
-					Teleport to a random location on Earth every minute.
-				</font><br><br>
-				<button>Add to Cart</button>
-			</td>
-		</tr>
-		<!-- row 3 (animal, telepathy, sticky) -->
-		<tr align="center" valign="top">
-			<td width="400" height="500">
+	<main>
+		<ul class="menu_flexbox">
+
+			<li>
 				<a href="products/animal.html">
-				<img src="images/burger1.jpg" alt="burger image" width="400" height="300"></a>
-				<h2>Animal</h2>
-				<font size="5">- Animal speech -<br>
-					Communicate with animals, but not humans.
-				</font><br><br>
-				<button>Add to Cart</button>
-			</td>
-			<td width="400" height="500">
-				<a href="products/telepathy.html">
-				<img src="images/burger1.jpg" alt="burger image" width="400" height="300"></a>
-				<h2>Telepathy</h2>
-				<font size="5">- Speak mentally -<br>
-					Communicate with people through the mind, but become mute.
-				</font><br><br>
-				<button>Add to Cart</button>
-			</td>
-			<td width="400" height="500">
-				<a href="products/sticky.html">
-				<img src="images/burger1.jpg" alt="burger image" width="400" height="300"></a>
-				<h2>Sticky</h2>
-				<font size="5">- Glue -<br>
-					Become insanely sticky. Only affects the skin.
-				</font><br><br>
-				<button>Add to Cart</button>
-			</td>
-		</tr>
-		<!-- row 4 (bouncy, hallucinate, wild) -->
-		<tr align="center" valign="top">
-			<td width="400" height="500">
+					<img class="product_pic" src="images/product1.png" alt="burger">
+					<h2>Animal Burger</h2>
+					<button>Order now</button>
+				</a>
+			</li>
+			<li>
 				<a href="products/bouncy.html">
-				<img src="images/burger1.jpg" alt="burger image" width="400" height="300"></a>
-				<h2>Bouncy</h2>
-				<font size="5">- Ball -<br>
-					Become insanely bouncy. Only affects the skin.
-				</font><br><br>
-				<button>Add to Cart</button>
-			</td>
-			<td width="400" height="500">
+					<img class="product_pic" src="images/product1.png" alt="burger">
+					<h2>Bouncy Burger</h2>
+					<button>Order now</button>
+				</a>
+			</li>
+			<li>
+				<a href="products/fall.html">
+					<img class="product_pic" src="images/product1.png" alt="burger">
+					<h2>Fall Burger</h2>
+					<button>Order now</button>
+				</a>
+			</li>
+
+			<li>
+				<a href="products/gills.html">
+					<img class="product_pic" src="images/product1.png" alt="burger">
+					<h2>Gills Burger</h2>
+					<button>Order now</button>
+				</a>
+			</li>
+			<li>
+				<a href="products/gravity.html">
+					<img class="product_pic" src="images/product1.png" alt="burger">
+					<h2>Gravity Burger</h2>
+					<button>Order now</button>
+				</a>
+			</li>
+			<li>
 				<a href="products/hallucinate.html">
-				<img src="images/burger1.jpg" alt="burger image" width="400" height="300"></a>
-				<h2>Hallucinate</h2>
-				<font size="5">- See things -<br>
-					See, hear, touch, smell, taste things that do not exist.
-				</font><br><br>
-				<button>Add to Cart</button>
-			</td>
-			<td width="400" height="500">
+					<img class="product_pic" src="images/product1.png" alt="burger">
+					<h2>Hallucinate Burger</h2>
+					<button>Order now</button>
+				</a>
+			</li>
+
+			<li>
+				<a href="products/invisible.html">
+					<img class="product_pic" src="images/product1.png" alt="burger">
+					<h2>Invisible Burger</h2>
+					<button>Order now</button>
+				</a>
+			</li>
+			<li>
+				<a href="products/night.html">
+					<img class="product_pic" src="images/product1.png" alt="burger">
+					<h2>Night Burger</h2>
+					<button>Order now</button>
+				</a>
+			</li>
+			<li>
+				<a href="products/sticky.html">
+					<img class="product_pic" src="images/product1.png" alt="burger">
+					<h2>Sticky Burger</h2>
+					<button>Order now</button>
+				</a>
+			</li>
+
+			<li>
+				<a href="products/telepathy.html">
+					<img class="product_pic" src="images/product1.png" alt="burger">
+					<h2>Telepath Burger</h2>
+					<button>Order now</button>
+				</a>
+			</li>
+			<li>
+				<a href="products/teleport.html">
+					<img class="product_pic" src="images/product1.png" alt="burger">
+					<h2>Teleport Burger</h2>
+					<button>Order now</button>
+				</a>
+			</li>
+			<li>
 				<a href="products/wild.html">
-				<img src="images/burger1.jpg" alt="burger image" width="400" height="300"></a>
-				<h2>Wild</h2>
-				<font size="5">- Mystery -<br>
-					Gain a random effect from the other burgers. Good luck.
-				</font><br><br>
-				<button>Add to Cart</button>
-			</td>
-		</tr>
-	</table>
-	<hr>
+					<img class="product_pic" src="images/product1.png" alt="burger">
+					<h2>Wild Burger</h2>
+					<button>Order now</button>
+				</a>
+			</li>
 
-	<p align="center"><a href="#">go to top</a></p>
-
+		</ul>
+	</main>
+	<!-- menu end -->
+	
 </body>
 </html>
