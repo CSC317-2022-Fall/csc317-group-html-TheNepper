@@ -20,7 +20,7 @@
 	border-width: 0 0 1px 0;
 }
 
-li, a, button {
+.nav_links li, .nav_links li a, .menu_flexbox li, .menu_flexbox li a {
 	font-size: 20px;
 	text-decoration: none;
 	list-style: none;
@@ -29,6 +29,7 @@ li, a, button {
 .nav_links li {
 	display: inline-block;
 	padding: 0 1em;
+	text-decoration: none;
 }
 
 .nav_links li a, .menu_flexbox a {
@@ -40,7 +41,8 @@ li, a, button {
 	color: white;
 }
 
-button {
+button.red {
+	font-size: 20px;
 	padding: 0.5em 1em;
 	color: white;
 	background-color: rgba(255, 51, 51, 1);
@@ -50,11 +52,11 @@ button {
 	transition: all 0.3s ease 0s;
 }
 
-button:hover {
+button.red:hover {
 	background-color: rgba(255, 51, 51, 0.8);
 }
 
-h1 {
+h1.orange_red_banner {
 	display: flex;
 	padding: 0.5em;
 	justify-content: center;
@@ -89,7 +91,6 @@ h1 {
 .product_page_grid {
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);
-	fo
 }
 
 .product_page_grid div img {
