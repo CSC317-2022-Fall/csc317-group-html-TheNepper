@@ -3,35 +3,30 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Crazy Burger Invisible Burger</title>
+	<title>Crazy Burger Product Invisible Burger</title>
 	<link rel="stylesheet" type="text/css" href="../style.css">
 </head>
 <body>
 
 	<!-- nav bar -->
-	<header class="nav_flexbox">
+	<nav class="navBar">
 		<a href="index.html"><img class="logo" src="../images/logo.png" alt="logo"></a>
-		<nav>
-			<ul class="nav_links">
-				<li><a href="../index.html">Menu</a></li>
-				<li><a href="../about.html">About</a></li>
-				<li><a href="../contact.html">Contact</a></li>
-				<li><a href="../location.html">Location</a></li>
-				<li><a href="../account.html">Account</a></li>
-			</ul>
-		</nav>
-		<a class="nav_links" href="cart.html"><button class="red">Cart</button></a>
-	</header>
-	<!-- nav bar end -->
+		<ul>
+			<li><a href="../index.html">Menu</a></li>
+			<li><a href="../location.html">Location</a></li>
+			<li><a href="../contact.html">Contact</a></li>
+			<li><a href="../about.html">About</a></li>
+			<li><a href="../account.html">Account</a></li>
+		</ul>
+		<a href="../cart.html"><button class="redButton">Cart</button></a>
+	</nav>
 
-	<main class="product_page_grid">
-		<div class="item1">
-			<img class="big_product_pic" src="../images/product1.png" alt="burger">
-		</div>
-		<div class="item2">
-			<h2>Invisible Burger</h2>
-			<p>
-				This burger allows the eater to be invisible. The eater becomes unable to be seen with just the naked eye although clothing remain unaffected. The drawback to this power is that the eater can still be seen if wearing clothing and being naked might be weird and dangerous.
+	<!-- content -->
+	<div class="product">
+		<img src="../images/product1.png" alt="burger">
+		<div>
+			<h1>Invisible Burger</h1>
+			<p>The burger grants the ability to vanish from sight. The naked eye of all living creatures are unable to perceive the user. The drawback is that clothing and held items are unaffected and only the user's body is invisible.
 			</p>
 			<ul>
 				<li>Serving Size: 1 Burger</li>
@@ -44,12 +39,18 @@
 				<li>Sugar: 5g</li>
 				<li>Protein: 20g</li>
 			</ul>
-			<h3>
-				$999.99
-			<h3>
-			<a href="cart.html"><button class="red">Add to Cart</button></a>
+			<h1>$999.99<h1>
+			<a href="../cart.html"><button class="redButton">Add to Cart</button></a>
 		</div>
-	</main>
+	</div>
+
+	<!-- footer -->
+	<footer>
+		<div class="footer">
+			<h2>© 2022 Crazy Burger</h2>
+			<a href="#"><button class="redButton">Go to Top</button></a>
+		</div>
+	</footer>
 
 </body>
 </html>
