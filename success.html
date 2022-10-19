@@ -1,27 +1,132 @@
 <!DOCTYPE html>
 <html>
+<style>
+	 header.nav_flexbox {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.logo {
+    width: 100px;
+}
+
+.navBar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10%;
+    position: sticky;
+    top: 0;
+    background-color: white;
+   
+    top: expression(documentElement.scrollTop + "px");
+    z-index: 9999;
+}
+
+.navBar ul {
+    list-style: none;
+}
+
+.navBar li {
+    display: inline-block;
+    padding: 0 1em;
+    font-size: 20px;
+}
+
+.navBar li a {
+    color: black;
+    text-decoration: none;
+    transition: all 0.3s ease 0s;
+}
+
+.navBar li a:hover {
+    color: white;
+    background-color: black;
+    font-size: 24px;
+}
+
+.redButton {
+    padding: 0.5em 1em;
+    margin: 0.5em 0;
+    background-color: rgb(255, 51, 51);
+    font-size: 20px;
+    cursor: pointer;
+    border: none;
+    border-radius: 2em;
+    transition: all 0.3s ease 0s;
+}
+
+.redButton:hover {
+    color: white;
+}
+
+.topBanner {
+    padding: 5%;
+    text-align: center;
+    color: white;
+    background-color: black;
+    background-image: url(images/background1.jpg);
+    background-size: cover;
+}
+section.text{
+   border-radius: 5px;
+	width: 500px;
+	height: 400px;
+	vertical-align: middle;
+	background-color: white;
+	border: none;
+	margin: auto;
+
+
+}
+input[type="submit"]{
+background-color: red;
+	opacity: 0.8;
+	border: none;
+	color: black;
+	border: none;
+    border-radius: 2em;
+    padding: 15px 20px;
+    width: 100px;
+    font-size: 20px;
+}
+input[type=submit]:hover{
+	color: white;
+}
+
+
+body{
+	background-color: #f1f1f1;
+	background-size: cover;
+	height: 100%;
+}
+
+</style>	
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Congratulation</title>
 </head>
 <body>
-	<!-- nav -->
-	
-	<table align="center" cellpadding="20" >
-		<tr>
-			<th width="100"><a href="index.html"><img src="images/logo.jpg" alt="logo image" width="150" height="100"></a></th>
-			<th width="100"><a href="index.html"><font size="6">Menu</font></th>
-			<th width="100"><a href="location.html"><font size="6">Location</font></th>
-			<th width="100"><a href="about.html"><font size="6">About</font></th>
-			<th width="100"><a href="faq.html"><font size="6">FAQ</font></th>
-			<th width="100"><a href="checkout.html"><font size="6">Checkout</font></th>
-			<th width="100"><a href="account.html"><font size="6">Account</font></th>
-			<th width="100"><a href="login.html"><img src="images/login.png" alt="login" height="50" width="50"></th>
-			
-		</tr>
-	</table>
-	<hr>
+	<nav class="navBar">
+		<a href="index.html"><img class="logo" src="images/logo.png" alt="logo"></a>
+		<ul>
+			<li><a href="index.html">Menu</a></li>
+			<li><a href="location.html">Location</a></li>
+			<li><a href="FAQ.html">FAQ</a></li>
+			<li><a href="about.html">About</a></li>
+			<li><a href="account.html">Account</a></li>
+		</ul>
+		<a href="checkout.html"><button class="redButton">Checkout</button></a>
+	</nav>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<section class="text">
 	<table align="center">
 		<tr>
 			<th><img src="images/correct.png" alt="correct" width="100" height="100"></th>
@@ -31,7 +136,7 @@
 	    </tr>
 	    <tr>
 	    	<td>
-	    		<p>Thank you. Your Account number is <strong>000001</strong>. Click below to login your User Name or Account number.</p>
+	    		<p align="center">Thank you. Your Account number is <strong>000001</strong>. Click below to login your User Name or Account number.</p>
 	    	</td>
 	    </tr>
 	    <tr>
@@ -41,6 +146,7 @@
 	    </from>	
 
 	  </table>  
+	</section>
 
 </body>
-</html>>
+</html>

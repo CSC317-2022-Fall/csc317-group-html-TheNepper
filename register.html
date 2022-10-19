@@ -1,36 +1,186 @@
 <!DOCTYPE html>
 <html>
+<style>
+	 header.nav_flexbox {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.logo {
+    width: 100px;
+}
+
+.navBar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10%;
+    position: sticky;
+    top: 0;
+    background-color: white;
+   
+    top: expression(documentElement.scrollTop + "px");
+    z-index: 9999;
+}
+
+.navBar ul {
+    list-style: none;
+}
+
+.navBar li {
+    display: inline-block;
+    padding: 0 1em;
+    font-size: 20px;
+}
+
+.navBar li a {
+    color: black;
+    text-decoration: none;
+    transition: all 0.3s ease 0s;
+}
+
+.navBar li a:hover {
+    color: white;
+    background-color: black;
+    font-size: 24px;
+}
+
+.redButton {
+    padding: 0.5em 1em;
+    margin: 0.5em 0;
+    background-color: rgb(255, 51, 51);
+    font-size: 20px;
+    cursor: pointer;
+    border: none;
+    border-radius: 2em;
+    transition: all 0.3s ease 0s;
+}
+
+.redButton:hover {
+    color: white;
+}
+
+.topBanner {
+    padding: 5%;
+    text-align: center;
+    color: white;
+    background-color: black;
+    background-image: url(images/background1.jpg);
+    background-size: cover;
+}
+
+footer {
+    width: 80%;
+    height: 200px;
+    padding: 2% 10%;
+    text-align: center;
+    color: white;
+    background-color: black;
+}
+
+body,html{
+	margin: 0;
+	padding: 0;
+	height: 100%;
+}
+
+div.title{
+	background-image: url(images/b5.png);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	height: 280px;
+
+}
+
+div.center{
+	border: 3px solid white;
+	background-color: white;
+	opacity: 0.8;
+	border-radius: 50%;
+	width: 200px;
+    height: 150px;
+    padding: 20px 30px;
+    left: 15%;
+    position: absolute;
+    text-align: center;
+    
+}
+
+input[type=submit]{
+	background-color: red;
+	opacity: 0.8;
+	border: none;
+	color: black;
+	border: none;
+    border-radius: 2em;
+    padding: 10px;
+}
+
+input[type=submit]:hover{
+	color: white;
+}
+
+input[type=text],[type=tel],[type=email],[type=password],[type=date]{
+	border-radius: 10px;
+	background-color: #f1f1f1;
+	border: 1px solid black;
+	padding: 10px 20px;
+}
+
+select{
+	width: 200px;
+	background-color: #f1f1f1;
+	border: 1px solid black;
+	border-radius: 10px;
+	padding: 10px 20px;
+}
+ fieldset{
+    background-color: white;
+
+  }
+  body{
+    background-color: rgba(245, 245, 245);
+  }
+
+</style>	
+
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Register Form</title>
 </head>
 <body>
-	<!-- nav -->
-	
-	<table align="center" cellpadding="20" >
-		<tr>
-			<th width="100"><a href="index.html"><img src="images/logo.jpg" alt="logo image" width="150" height="100"></a></th>
-			<th width="100"><a href="index.html"><font size="6">Menu</font></th>
-			<th width="100"><a href="location.html"><font size="6">Location</font></th>
-			<th width="100"><a href="about.html"><font size="6">About</font></th>
-			<th width="100"><a href="faq.html"><font size="6">FAQ</font></th>
-			<th width="100"><a href="checkout.html"><font size="6">Checkout</font></th>
-			<th width="100"><a href="account.html"><font size="6">Account</font></th>
-			<th width="100"><a href="login.html"><img src="images/login.png" alt="login" height="50" width="50"></th>
+	<!-- nav bar -->
+    <nav class="navBar">
+        <a href="index.html"><img class="logo" src="images/logo.png" alt="logo"></a>
+        <ul>
+            <li><a href="index.html">Menu</a></li>
+            <li><a href="location.html">Location</a></li>
+            <li><a href="FAQ.html">FAQ</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="account.html">Account</a></li>
+        </ul>
+        <a href="checkout.html"><button class="redButton">Checkout</button></a>
+    </nav>
+	<div class="title">
+		<br>
+		<br>
+		<br>
+		<div class="center">
+		<br>
 			
-		</tr>
-	</table>
-	<hr>
-
-	<h2 align="center">Registeration Form</h2>
-	<hr>
+		<h1> Join Us !!!</h1>
+	    </div>
+	</div>	
 
 	<table align="center">
 		<tr>
 			
 			<td><form action="success.html">
-				<legend><h3>Personal Information</h3></legend>
+				<legend><h3 align="center">Registeration Form</h3></legend>
 				<fieldset>
 				
 				<table cellpadding="10">
@@ -44,7 +194,7 @@
 					</tr>		
                     <tr>
                     	<th><label for="birthday">Birthday: </th>
-						<th><input type="date" id="birthday" name="birthday" required></th>
+						<th><input type="date" id="birthday" name="birthday" class="date" required></th>
 					</tr>
 
 					<tr>
@@ -125,20 +275,7 @@
                         <input type="tel" id="zipcode" name="zipcode" placeholder="12345" pattern="[0-9]{5}"" required><br>
                        </th>
                       </tr> 
-					    	
-                 </table>	   
 				
-				<br>
-				
-			</fieldset>
-		
-			<br>
-			<br>
-
-        
-			<legend><h3>User Name and Password setting</h3></legend>
-				<fieldset>
-					<table cellpadding="10">
 						<tr>
 							<th><label for="username">User Name:</label></th>
 							<th><input type="text" id="username" name="username" required></th>
@@ -154,6 +291,17 @@
                   </table>		     	
 				</fieldset>
 		</form>	
+		</tr>
+</table>			
+	
+		<br>
+
+	<footer>
+        <div class="footer">
+            <h2>© 2022 Crazy Burger</h2>
+            <a href="#"><button class="redButton">Go to Top</button></a>
+        </div>
+    </footer>           
 
 </body>
 </html>

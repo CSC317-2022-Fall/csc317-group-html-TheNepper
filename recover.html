@@ -1,53 +1,181 @@
 <!DOCTYPE html>
 <html>
+<style>
+	 header.nav_flexbox {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.logo {
+    width: 100px;
+}
+
+.navBar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10%;
+    position: sticky;
+    top: 0;
+    background-color: white;
+   
+    top: expression(documentElement.scrollTop + "px");
+    z-index: 9999;
+}
+
+.navBar ul {
+    list-style: none;
+}
+
+.navBar li {
+    display: inline-block;
+    padding: 0 1em;
+    font-size: 20px;
+}
+
+.navBar li a {
+    color: black;
+    text-decoration: none;
+    transition: all 0.3s ease 0s;
+}
+
+.navBar li a:hover {
+    color: white;
+    background-color: black;
+    font-size: 24px;
+}
+
+.redButton {
+    padding: 0.5em 1em;
+    margin: 0.5em 0;
+    background-color: rgb(255, 51, 51);
+    font-size: 20px;
+    cursor: pointer;
+    border: none;
+    border-radius: 2em;
+    transition: all 0.3s ease 0s;
+}
+
+.redButton:hover {
+    color: white;
+}
+
+.topBanner {
+    padding: 5%;
+    text-align: center;
+    color: white;
+    background-color: black;
+    background-image: url(images/background1.jpg);
+    background-size: cover;
+}
+
+footer {
+    width: 80%;
+    height: 200px;
+    padding: 2% 10%;
+    text-align: center;
+    color: white;
+    background-color: black;
+}
+
+a{
+  color: gray;
+
+}
+
+input[type=submit]{
+	background-color: red;
+	opacity: 0.8;
+	border: none;
+	color: black;
+	border: none;
+    border-radius: 2em;
+    padding: 10px 20px;
+}
+
+input[type=email]{
+	border: 1px solid black;
+	border-radius: 12px;
+	padding: 10px 20px;
+	background-color: #f1f1f1;
+	width: 300px;
+}
+
+fieldset{
+	border-radius: 5px;
+	width: 500px;
+	height: 400px;
+	vertical-align: middle;
+	background-color: white;
+	border: none;
+
+	
+}
+body,html{
+	padding: 0;
+	height: 100%;
+	margin: 0;
+}
+div.background{
+	background-color: #f1f1f1;
+	background-size: cover;
+	height: 100%;
+
+}
+input[type=submit]:hover{
+	color: white;
+}
+legend{
+	font-size: 30px;
+}
+</style>	
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Recover Your Password</title>
 </head>
 <body>
-	<!-- nav -->
-	<table align="center" cellpadding="20" >
-		<tr>
-			<th width="100"><a href="index.html"><img src="images/logo.jpg" alt="logo image" width="150" height="100"></a></th>
-			<th width="100"><a href="index.html"><font size="6">Menu</font></th>
-			<th width="100"><a href="location.html"><font size="6">Location</font></th>
-			<th width="100"><a href="about.html"><font size="6">About</font></th>
-			<th width="100"><a href="faq.html"><font size="6">FAQ</font></th>
-			<th width="100"><a href="checkout.html"><font size="6">Checkout</font></th>
-			<th width="100"><a href="account.html"><font size="6">Account</font></th>
-			<th width="100"><a href="login.html"><img src="images/login.png" alt="login" height="50" width="50"></th>
-			
-		</tr>
-	</table>
+	<!-- nav bar -->
+   <nav class="navBar">
+        <a href="index.html"><img class="logo" src="images/logo.png" alt="logo"></a>
+        <ul>
+            <li><a href="index.html">Menu</a></li>
+            <li><a href="location.html">Location</a></li>
+            <li><a href="FAQ.html">FAQ</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="account.html">Account</a></li>
+        </ul>
+        <a href="checkout.html"><button class="redButton">Checkout</button></a>
+    </nav>
+    <div class="background">
 	<hr>
 	<br>
 	<br>
 	<br>
 	<table align="center">
 		<tr>
-			<th></th>
+	
 	<th>		
-	<form>
+	<form action="code.html">
+		<legend>Forget Password</legend><br>
 	<fieldset>
-	<label for="email"><strong>Enter your email:</strong></label>
-    <input type="email" id="email" name="email" required>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>	
+	<label for="email"><strong>Enter your email Address:</strong></label><br><br>
+    <input type="email" id="email" name="email" required><br><br>
+    <a href="login.html">Back to sign in</a><br><br>
     <input type="submit" value="Sent">
     </form>	
-    <br>
-    <br>
-    <br>
-    <form action="changepass.html">
-    	<label for="code"><strong>Enter the Verification Code: <strong></label>
-    	<input type="tel" id="code" name="code" pattern="[0-9]{6}" placeholder="******" required>
-    	<input type="submit" value="Enter">
-    </form>
     </fieldset>	
     </th>
-    <th></th>
+    
     </tr>
     </table> 	
-
-
+<div>
 </body>
 </html>
