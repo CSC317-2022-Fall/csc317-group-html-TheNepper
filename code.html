@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <style>
-	header.nav_flexbox {
+	 header.nav_flexbox {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
@@ -70,34 +70,44 @@
     background-image: url(images/background1.jpg);
     background-size: cover;
 }
-input[type=submit]{
-	background-color: red;
-	opacity: 0.8;
-	border: none;
-	color: black;
-	border: none;
-    border-radius: 2em;
-    padding: 10px 20px;
-}
 
-input[type=password]{
-	border: 1px solid black;
-	border-radius: 12px;
-	padding: 10px 20px;
-	background-color: #f1f1f1;
-	width: 300px;
-}
-
-fieldset{
+	fieldset{
 	border-radius: 5px;
-	width: 500px;
-	height: 400px;
+	width: 550px;
+	height: 450px;
 	vertical-align: middle;
 	background-color: white;
-	border: none;
-
+    border: none;
+	
 	
 }
+	input.code{
+		 font-size: 70px;
+        width:80px ;
+        height: 80px;
+    text-align: center;
+    flex: 1 0 1em;
+
+	}
+
+	legend{
+	font-size: 30px;
+}
+
+input[type=submit]{
+	background-color: red;
+    opacity: 0.8;
+    border: none;
+    color: black;
+    border: none;
+    border-radius: 2em;
+    padding: 10px 20px;
+
+}
+input[type=submit]:hover{
+	color: white;
+}
+
 body,html{
 	padding: 0;
 	height: 100%;
@@ -109,18 +119,21 @@ div.background{
 	height: 100%;
 
 }
-input[type=submit]:hover{
-	color: white;
-}
-legend{
-	font-size: 30px;
-}
-</style>
 
+p{
+    color: gray;
+
+}
+a{
+    color: red;
+    text-decoration: none;
+}
+
+</style>	
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Change Your Password</title>
+	<title>Verfication</title>
 </head>
 <body>
 	<!-- nav bar -->
@@ -135,36 +148,43 @@ legend{
         </ul>
         <a href="checkout.html"><button class="redButton">Checkout</button></a>
     </nav>
-    <div class="background">
-	<hr>
-	<br>
-	<br>
-	<br>
+
+	<div class="background">
 	<table align="center">
 		<tr>
 	
 	<th>		
-	<form action="successchange.html">
-		<legend>New Password</legend><br>
+	<form action="changepass.html">
+		<legend>Verfication</legend><br>
 	<fieldset>
 	<br>
 	<br>
 	<br>
 	<br>
 	<br>	
-	<label for="Password"><strong>Enter New Password:</strong></label><br><br>
-    <input type="password" id="Password" name="Password" required><br><br>
-    <label for="Password"><strong>Confirm Password:</strong></label><br><br>
-    <input type="password" id="Password" name="Password" required><br><br>
-    
-    <input type="submit" value="Submit">
+	<label for="email"><strong>Enter Verfication Code:</strong></label>
+	<br>
+	<br>
+	<br>
+    <div>
+      <input type="tel" pattern="[0-9]{1}" name='code' class='code' required/>
+      <input type="tel" pattern="[0-9]{1}" name='code' class='code' required/>
+      <input type="tel" pattern="[0-9]{1}" name='code' class='code' required/>
+      <input type="tel" pattern="[0-9]{1}" name='code' class='code' required/>
+    </div>
+    <br>
+    <br>
+    <p> If you didn't receive a code! <a href="#"> Resend Code</a></p>
+    <br>
+    <br>
+    <input type="submit" value="Verify">
     </form>	
     </fieldset>	
     </th>
     
     </tr>
-    </table> 	
-<div>
+    </table> 
+    <div>	
 
 </body>
 </html>

@@ -1,5 +1,148 @@
 <!DOCTYPE html>
 <html>
+<style>
+	<style>
+	 header.nav_flexbox {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.logo {
+    width: 100px;
+}
+
+.navBar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10%;
+    position: sticky;
+    top: 0;
+    background-color: white;
+    top: expression(documentElement.scrollTop + "px");
+    z-index: 9999;
+}
+
+.navBar ul {
+    list-style: none;
+}
+
+.navBar li {
+    display: inline-block;
+    padding: 0 1em;
+    font-size: 20px;
+}
+
+.navBar li a {
+    color: black;
+    text-decoration: none;
+    transition: all 0.3s ease 0s;
+}
+
+.navBar li a:hover {
+    color: white;
+    background-color: black;
+    font-size: 24px;
+}
+
+.redButton {
+    padding: 0.5em 1em;
+    margin: 0.5em 0;
+    background-color: rgb(255, 51, 51);
+    font-size: 20px;
+    cursor: pointer;
+    border: none;
+    border-radius: 2em;
+    transition: all 0.3s ease 0s;
+}
+
+.redButton:hover {
+    color: white;
+}
+
+.topBanner {
+    padding: 5%;
+    text-align: center;
+    color: white;
+    background-color: black;
+    background-image: url(images/background1.jpg);
+    background-size: cover;
+}
+
+
+
+body,html{
+	height: 100%;
+	margin: 0;
+}
+	
+	div.main{
+		 padding: 1px; 16px; height: 1000px;
+
+	}
+	ul.navbar{
+  	llist-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: 15%;
+  background-color: #ff3333;
+  position: fixed;
+  height: 100%;
+  overflow: auto;
+
+  	
+  }
+  ul.navbar li a {
+  	display: block;
+  color: black;
+  padding: 8px 16px;
+  text-decoration: none;
+  }
+   
+  li a:hover:not(.active){
+  	background-color: darkred;
+  	color: white;
+  }
+  input[type=submit]{
+	background-color: red;
+	opacity: 0.8;
+	border: none;
+	color: black;
+	border: none;
+    border-radius: 2em;
+    padding: 10px;
+}
+
+input[type=submit]:hover{
+	color: white;
+}
+
+input[type=text],[type=tel],[type=email],[type=password],[type=date]{
+	border-radius: 10px;
+	background-color: #f1f1f1;
+	border:1px solid black;
+	padding: 10px 20px;
+}
+
+select{
+	width: 200px;
+	background-color: #f1f1f1;
+	border: 1px solid black;
+	border-radius: 10px;
+	padding: 10px 20px;
+}
+
+
+  fieldset{
+  	background-color: white;
+
+  }
+  body{
+  	background-color: rgba(245, 245, 245);
+  }
+</style>	
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -7,29 +150,44 @@
 </head>
 <body>
 
-	<!-- nav -->
-	<table align="center" cellpadding="20">
-		<tr>
-			<th width="100"><a href="index.html"><img src="images/logo.jpg" alt="logo image" width="150" height="100"></a></th>
-			<th width="100"><a href="index.html"><font size="6">Menu</font></th>
-			<th width="100"><a href="location.html"><font size="6">Location</font></th>
-			<th width="100"><a href="about.html"><font size="6">About</font></th>
-			<th width="100"><a href="faq.html"><font size="6">FAQ</font></th>
-			<th width="100"><a href="checkout.html"><font size="6">Checkout</font></th>
-			<th width="100"><a href="account.html"><font size="6">Account</font></th>
-                        <th width="100"><a href="login.html"><img src="images/login.png" alt="login" height="50" width="50"></th>
-		</tr>
-	</table>
-	<hr>
+	<!-- nav bar -->
+   <nav class="navBar">
+		<a href="index.html"><img class="logo" src="images/logo.png" alt="logo"></a>
+		<ul>
+			<li><a href="index.html">Menu</a></li>
+			<li><a href="location.html">Location</a></li>
+			<li><a href="FAQ.html">FAQ</a></li>
+			<li><a href="about.html">About</a></li>
+			<li><a href="account.html">Account</a></li>
+		</ul>
+		<a href="checkout.html"><button class="redButton">Checkout</button></a>
+	</nav>
+
+	<!-- nav bar end -->
 
 	<!-- page content -->
-	<h2 align="center">Account Settings</h2>
-	<hr>
+	
+					<ul class="navbar">
+						
+						<li><a href="account.html">Personal Information</a></li>
+					    
+					  
+					    <li><a href="account.html#contact-div">Contact Information</a></li>
+					    
+					 
+					    <li><a href="account.html#account-div">Account Setting</a></li>
+					    
+					 </ul>  
+					
+	
+	
+<div class="main">
 
 	<table align="center">
 		<tr>
 			
 			<td><form>
+				
 				<legend><h3>Personal Information</h3></legend>
 				<fieldset>
 				<table align="center">
@@ -43,7 +201,8 @@
 
 				<br>
 				<br>
-				<table cellpadding="10">
+				<table cellpadding="10" align="center">
+					
 					<tr>
 						<th> <label for="fname"> First Name </label></th>
 						<th> <label for="lname"> Last Name </label> </th>
@@ -56,6 +215,21 @@
                     	<th><label for="birthday">Birthday: </th>
 						<th><input type="date" id="birthday" name="birthday" required></th>
 					</tr>
+					<table align="center">
+                  <tr>
+                  	<th><input type="submit" value="Change"></th>
+                  </tr>
+                  </table>	
+
+				</fieldset>
+			</form>
+				  <br>
+				  <br>
+			<form>
+				<div id="contact-div">
+			      <legend><h3> Contact</h3></legend>
+			      <fieldset>
+			      <table cellpadding="10" align="center">
 
 					<tr>
 						<th><label for="email"> Email: </label></th>
@@ -145,14 +319,16 @@
                   </tr>
                   </table>	
 			</fieldset>
+			</div id="contact-div">
 		</form>
 			<br>
 			<br>
 
         <form>
-			<legend><h3>Password Setting</h3></legend>
+        	<div id="account-div">
+			<legend><h3>Account Setting</h3></legend>
 				<fieldset>
-					<table cellpadding="10">
+					<table cellpadding="10" align="center">
 						<tr>
 							<th><label for="account">Account Number:</label></th>
 							<td>000001</td>
@@ -171,7 +347,15 @@
                   </tr>
                   </table>		     	
 				</fieldset>
+			</div id="account-div">
 		</form>	
+	</th class="account">
+</tr>
+
+</table>
+</div>
+<br>
+
  
 </body>
 </html>
