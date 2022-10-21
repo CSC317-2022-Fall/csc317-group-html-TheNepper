@@ -1,72 +1,78 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Crazy Burger - Location</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Crazy Burger Locations</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
 
-    <!-- nav -->
-    <table align="center" cellpadding="20">
-        <tr>
-            <th width="100"><a href="index.html"><img src="images/logo.jpg" alt="logo image" width="150" height="100"></a></th>
-            <th width="100"><a href="index.html"><font size="6">Menu</font></th>
-            <th width="100"><a href="location.html"><font size="6">Location</font></th>
-            <th width="100"><a href="about.html"><font size="6">About</font></th>
-            <th width="100"><a href="faq.html"><font size="6">FAQ</font></th>
-            <th width="100"><a href="checkout.html"><font size="6">Checkout</font></th>
-            <th width="100"><a href="account.html"><font size="6">Account</font></th>
-	    <th width="100"><a href="login.html"><img src="images/login.png" alt="login" height="50" width="50"></th>    
-        </tr>
-    </table>
-    <hr>
+    <!-- nav bar -->
+    <nav class="navBar">
+        <a href="index.html"><img class="logo" src="images/logo.png" alt="logo"></a>
+        <ul>
+            <li><a href="index.html">Menu</a></li>
+            <li><a href="location.html">Location</a></li>
+            <li><a href="FAQ.html">FAQ</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="account.html">Account</a></li>
+            <li><a href="login.html">Login</a></li>
+        </ul>
+        <a href="checkout.html"><button class="redButton">Checkout</button></a>
+    </nav>
 
-    <!-- page content -->
-    <header>
-    <h1 align="center"><font size="7">Location</font></h1>
-    </header>
-    <hr>
+    <!-- top banner -->
+    <h1 class="topBanner">Locations</h1>
 
-    <section>
-    	<table>
-    		<tr>
-    		<td><img src="images/burger.png" width="200" height="600"></td>	
-    	    <td> <article>
-                <h2 align="center">Quality over quantity</h2>
-                <p align="center"><font size="5">
-    				Our restaurants are rare and few with a focus on quality over quantity. To maintain strict quality control of our products, we only have 3 locations available at this current time. We are confident that these 3 restaurants are capable of representing the greatness of our products to its fullest extent.</font>
-                </p>
-                </article>
-                <hr>
-                <section>
-                <h2 align="center">Our Locations</h2>
-                <table align="center" cellpadding="30%">
-                    <tr>
-                        <th><h2>Los Angeles</h2><br>
-                            Address:**********<br>
-                            Phone  :<a href="tel:2131234567">213-123-4567</a><br>
-                            Hours  :9AM - 9PM<br> 
-                            Email  :<a href="mailto:crazyburger@email.com">crazyburger@email.com</a>
-                        </th>
-                        <th><h2>San Francisco</h2><br>
-                            Address:*********<br>
-                            Phone  :<a href="tel:4151234567">415-123-4567</a><br>
-                            Hours  :9AM - 9PM<br>
-                            Email  :<a href="mailto:crazyburger@email.com">crazyburger@email.com</a>
-                        </th>
-                        <th><h2>New York</h2><br>
-                            Address:********<br>
-                            Phone:<a href="tel:9171234567">917-123-4567</a><br>
-                            Hours:9AM - 9PM<br>
-                            Email:<a href="mailto:crazyburger@email.com">crazyburger@email.com</a>
-                        </th>
-                    </tr>
-                </table>        
-                </section></td>
-            <td><img src="images/burger.png" width="200" height="600"></td>
-        </table>
-    </section>            
+    <!-- locations -->
+    <div class="location">
+        <div>
+            <h1>SERRAMONTE CENTER</h1>
+            <ul>
+                <li>127-K Serramonte Center, Space 662, Daly City, CA  94015</li>
+                <li>Daily, 10:30am to 9pm</li>
+                <li>415-123-4567</li>
+                <li>Pickup Order</li>
+            </ul>
+            <img src="images/location1.png">
+        </div>
+        <div>
+            <h1>DOWNTOWN</h1>
+            <ul>
+                <li>721 Market Street, San Francisco, CA 94103</li>
+                <li>Daily, 10:00am to 8pm</li>
+                <li>415-223-4567</li>
+                <li>Pickup Order and Delivery</li>
+            </ul>
+            <img src="images/location2.png">
+        </div>
+        <div>
+            <h1>MARINA</h1>
+            <ul>
+                <li>2201 Chestnut Street, San Francisco, CA 94123</li>
+                <li>Sun-Thu: 10:30am to 10pm, Fri-Sat: 10:30am to 11pm</li>
+                <li>415-323-4567</li>
+                <li>Pickup Order and Delivery</li>
+            </ul>
+            <img src="images/location3.png">
+        </div>
+    </div>
+
+    <!-- new locations -->
+    <div class="newLocation">
+        <h1>New Locations Coming!</h1>
+        <p>We are planning on opening up new locations around the world. We will first begin expanding within the state of California especially around the Bay Area. Next, we will open restaurants nationwide around the United States so that even more people can experience the pleasure of our products. Then, we will expand overseas into other countries so that we can spread our delicious and crazy products around the world. We will keep our loyal customers updated via email whenever a new location is close to opening within a month. Thank you for purchasing our products and stay tuned for more!</p>
+    </div>
+
+    <!-- footer -->
+    <footer>
+        <div class="footer">
+            <h2>© 2022 Crazy Burger</h2>
+            <a href="#"><button class="redButton">Go to Top</button></a>
+        </div>
+    </footer>
+
 
 </body>
 </html>
