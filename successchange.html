@@ -1,131 +1,33 @@
 <!DOCTYPE html>
 <html>
-<style>
-	 header.nav_flexbox {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    font-family: 'Montserrat', sans-serif;
-}
-
-.logo {
-    width: 100px;
-}
-
-.navBar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 10%;
-    position: sticky;
-    top: 0;
-    background-color: white;
-   
-    top: expression(documentElement.scrollTop + "px");
-    z-index: 9999;
-}
-
-.navBar ul {
-    list-style: none;
-}
-
-.navBar li {
-    display: inline-block;
-    padding: 0 1em;
-    font-size: 20px;
-}
-
-.navBar li a {
-    color: black;
-    text-decoration: none;
-    transition: all 0.3s ease 0s;
-}
-
-.navBar li a:hover {
-    color: white;
-    background-color: black;
-    font-size: 24px;
-}
-
-.redButton {
-    padding: 0.5em 1em;
-    margin: 0.5em 0;
-    background-color: rgb(255, 51, 51);
-    font-size: 20px;
-    cursor: pointer;
-    border: none;
-    border-radius: 2em;
-    transition: all 0.3s ease 0s;
-}
-
-.redButton:hover {
-    color: white;
-}
-
-.topBanner {
-    padding: 5%;
-    text-align: center;
-    color: white;
-    background-color: black;
-    background-image: url(images/background1.jpg);
-    background-size: cover;
-}
-section.text{
-    border-radius: 5px;
-	width: 500px;
-	height: 400px;
-	vertical-align: middle;
-	background-color: white;
-	border: none;
-	margin: auto;
-
-
-
-}
-input[type="submit"]{
-background-color: red;
-	opacity: 0.8;
-	border: none;
-	color: black;
-	border: none;
-    border-radius: 2em;
-    padding: 15px 20px;
-    width: 100px;
-    font-size: 20px;
-}
-input[type=submit]:hover{
-	color: white;
-}
-body{
-	background-color: #f1f1f1;
-	background-size: cover;
-	height: 100%;
-}
-</style>	
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Password Change</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
 </head>
-<body>
+<body class="recover_body">
 	<nav class="navBar">
 		<a href="index.html"><img class="logo" src="images/logo.png" alt="logo"></a>
 		<ul>
 			<li><a href="index.html">Menu</a></li>
-			<li><a href="location.html">Location</a></li>
-			<li><a href="FAQ.html">FAQ</a></li>
-			<li><a href="about.html">About</a></li>
-			<li><a href="account.html">Account</a></li>
+            <li><a href="location.html">Location</a></li>
+            <li><a href="FAQ.html">FAQ</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="account.html">Account</a></li>
+            <li><a href="login.html">Login</a></li>
 		</ul>
 		<a href="checkout.html"><button class="redButton">Checkout</button></a>
 	</nav>
+	<div class="recover_background">
 	<br>
 	<br>
 	<br>
 	<br>
 	<br>
-	<section class="text">
-	<table align="center">
+	<section class="success_text">
+	<div class="center">
+	<table align="center" class="success_table">
 		<tr>
 			<th><img src="images/correct.png" alt="correct" width="100" height="100"></th>
 		</tr>
@@ -140,11 +42,13 @@ body{
 	    <tr>
 	    <th>
 	    <form action="login.html">
-	    	<input type="submit" value="Close">
+	    	<input  class="recover_button" type="submit" value="Close">
 	    </from>	
-
+	    </th>
+	   </tr>
 	  </table>  
+	</div>
 	</section>
-
+</div>
 </body>
 </html>

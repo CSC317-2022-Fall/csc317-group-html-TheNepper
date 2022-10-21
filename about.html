@@ -1,186 +1,12 @@
 <!DOCTYPE html>
-<html>
-<style>
-    header.nav_flexbox {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    font-family: 'Montserrat', sans-serif;
-}
-
-.logo {
-    width: 100px;
-}
-
-.navBar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 10%;
-    position: sticky;
-    top: 0;
-    background-color: white;
-   
-    top: expression(documentElement.scrollTop + "px");
-    z-index: 9999;
-}
-
-.navBar ul {
-    list-style: none;
-}
-
-.navBar li {
-    display: inline-block;
-    padding: 0 1em;
-    font-size: 20px;
-}
-
-.navBar li a {
-    color: black;
-    text-decoration: none;
-    transition: all 0.3s ease 0s;
-}
-
-.navBar li a:hover {
-    color: white;
-    background-color: black;
-    font-size: 24px;
-}
-
-.redButton {
-    padding: 0.5em 1em;
-    margin: 0.5em 0;
-    background-color: rgb(255, 51, 51);
-    font-size: 20px;
-    cursor: pointer;
-    border: none;
-    border-radius: 2em;
-    transition: all 0.3s ease 0s;
-}
-
-.redButton:hover {
-    color: white;
-}
-
-.topBanner {
-    padding: 5%;
-    text-align: center;
-    color: white;
-    background-color: black;
-    background-image: url(images/background1.jpg);
-    background-size: cover;
-}
-
-.footer {
-    width: 80%;
-    height: 200px;
-    padding: 2% 10%;
-    text-align: center;
-    color: white;
-    background-color: black;
-}
-
-
-div.title{
-         background-image: url(images/b2.png);
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-border: 3px solid none;
-        position: relative;
-        height: 350px;
-        
-}
-div.center{
-    text-align: center;
-
-    border: 3px solid white;
-    background-color: white;
-    opacity: 0.7;
-    border-radius: 50%;
-    width: 200px;
-    height: 160px;
-    padding: 20px 30px;
-    left: 20%;
-    position: absolute;
-}
-table.text{
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    border: none;
-}
-td.side img{
-    size: cover;
-    height: 700;
- 
-}
-td.info{
-    background-image: url(images/b3.png);
-    background-repeat:no-repeat ;
-    background-size: 100px 95px;
-    background-position: 37% 13%;
-}
- h2{
-    
-    text-shadow: 2px 2px 5px red;
-}
-section.about{
-    border: 1px solid black;
-    border-radius: 50%;
-    background-color: white;
-    width: 80%;
-    height: 400px;
-    margin: auto;
-
-
-}
-section.value{
-    border: 10px solid transparent;
-    padding: 15px;
-    border-image: linear-gradient(red, black) 27;
-    
-    
-
-}
-img.value{
-    border: 1px solid black;
-    border-radius: 50%;
-    height: 400px;
-    width: 400px;
-}
-p{
-    border: none;
-    width: 70%;
-    height: 70%;
-
-}
-div.background{
-    background-image:url(images/b6.png) ;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 600px;
-}
-
-
-body,html{
-    height: 100%;
-    margin: 0;
-
-
-}
-hr{
-    border: 10px solid white;
-
-}
-</style>    
+<html>  
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Crazy Burger - About</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
 </head>
-<body>
+<body class="about">
 
     <!-- nav bar -->
     <nav class="navBar">
@@ -191,41 +17,41 @@ hr{
             <li><a href="FAQ.html">FAQ</a></li>
             <li><a href="about.html">About</a></li>
             <li><a href="account.html">Account</a></li>
+            <li><a href="login.html">Login</a></li>
         </ul>
         <a href="checkout.html"><button class="redButton">Checkout</button></a>
     </nav>
-    <div class="title">
+    <div class="about_title">
         <br>
         <br>
         <br>
-        <div class="center">
+        <div class="about_center">
             <br>
-            <br>
-        <h1>About Us</h1>
+        <h1 class="about">About Us</h1>
     </div>
     </div>
     <hr>
     
     
- <div class="background"> 
+ <div class="about_background"> 
  <br>
  <br>
  <br>
  <br>
 
  
-<section class="about">
+<section class="about_company">
           <article>
                 <br>
                 <table align="center">
                 <tr>    
                 <th>    
-                <h2 align="center">Our Company</h2>
+                <h2 align="center" class="about">Our Company</h2>
                </th>
                 </tr>
                 <tr>
-                <td align="center">
-                <p align="center"><font size="5">
+                <td align="center" >
+                <p align="center" class="about"><font size="5">
     				Crazy Burger was founded in 1885 in San Francisco, California. Our family run business has continued our passion to pursue the craziest and wackiest burgers imaginable. We source our fresh and natural ingredients from local suppliers and from other worlds. Though we cannot disclose the methods we use to gather ingredients from other worlds, we can declare that our products are unparalleled in power, passion, and prestige. No other company can copy what we offer. We hope you continue to follow us through our journey into the future into discovering even more crazier burgers!</font>
                 </p>
                </td>
@@ -243,24 +69,24 @@ hr{
            <br>
            <br>
              
-                <table cellpadding="50px">
+                <table class="table_value">
                     <tr>
-                        <td><img src="images/b4.png" class="value"></td>
+                        <td class="about_img"><img src="images/b4.png" class="about_img"></td>
                         <th>
-                <section class="value">            
+                <div class="about_value">            
                 <h2 align="center">Our Values</h2>
                 <table align="center" cellpadding="30%" class="value">
                     <tr valign="top" align="center">
                         <th width="500"><h3>Ingenuity</h3>
-                            <p><font size="4">
+                            <p class="about"><font size="4">
                                 We strive for innovation and evolution. Our food will never stop growing in its potential and awesomeness. We devote ourselves to exploring the unknown in the world of burgers and powers.</font>
                             </p>
                         </th>
                         <th width="500"><h3>Impact</h3>
-                            <p><font size="4">
+                            <p class="about"><font size="4">
                                 We strive to create unforgettable experiences. Our food will never stop changing our customers' lives. We devote ourselves to forging the wildest and wackiest burgers with tremendous consequences.</font>
                             </p>
-                            </section>
+                            </div>
                         </th>
                     </tr>
                 </table>  

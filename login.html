@@ -1,163 +1,16 @@
 <!DOCTYPE html>
 <html>
-<style>
-	header.nav_flexbox {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    font-family: 'Montserrat', sans-serif;
-}
-
-.logo {
-    width: 100px;
-}
-
-.navBar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 10%;
-    position: sticky;
-    top: 0;
-    background-color: white;
-   
-    top: expression(documentElement.scrollTop + "px");
-    z-index: 9999;
-}
-
-.navBar ul {
-    list-style: none;
-}
-
-.navBar li {
-    display: inline-block;
-    padding: 0 1em;
-    font-size: 20px;
-}
-
-.navBar li a {
-    color: black;
-    text-decoration: none;
-    transition: all 0.3s ease 0s;
-}
-
-.navBar li a:hover {
-    color: white;
-    background-color: black;
-    font-size: 24px;
-}
-
-.redButton {
-    padding: 0.5em 1em;
-    margin: 0.5em 0;
-    background-color: rgb(255, 51, 51);
-    font-size: 20px;
-    cursor: pointer;
-    border: none;
-    border-radius: 2em;
-    transition: all 0.3s ease 0s;
-}
-
-.redButton:hover {
-    color: white;
-}
-
-.topBanner {
-    padding: 5%;
-    text-align: center;
-    color: white;
-    background-color: black;
-    background-image: url(images/background1.jpg);
-    background-size: cover;
-}
- body,html{
-	height: 100%;
-	margin: 0;
-	
-}
-
-table.loginform{
-		width: 600px;
-		height: auto;
-		margin-left:auto; 
-    margin-right:auto;
-    padding: 120px 0;
-
-	}
-	table.button{
-		width: 100%;
-	}
-	table.login{
-		width: 100%;
-
-	}
-	table.title{
-		width: 100%;
-		color: black;
-	}
-	a.login{
-		text-decoration: none;
-		color: black;
-	}
-	fieldset{
-		border: none;
-		padding: 0;
-	}
-	
-
-	.sign{
-		background-color: red;
-		border: none;
-		color:  black;
-		padding: 15px 32px;
-		text-align: center;
-		display: inline-block;
-		border-radius:12px ;
-		width: 80%;
-
-	}
-	.sign:hover{
-		color: white;
-	}
-	input.login{
-		background-color: white;
-		width: 60%;
-		padding: 5px;
-		border-radius: 12px;
-		padding: 5px;
-		border-color: black;
-
-
-	}
-	label{
-		color: black;
-	}
-	div.login{
-		background-color: white;
-		opacity: 0.8;
-	}
-	div.background{
-		background-image: url(images/b1.png);
-		background-repeat: no-repeat;
-		background-position: center;
-		background-size: cover;
-		height: 100%;
-		
-	}
-
-
-
-</style>
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Login</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
 	
 	
 	
 </head>
 			
-<body >
+<body class="login">
 	<!-- nav bar -->
 	<nav class="navBar">
 		<a href="index.html"><img class="logo" src="images/logo.png" alt="logo"></a>
@@ -167,11 +20,12 @@ table.loginform{
 			<li><a href="FAQ.html">FAQ</a></li>
 			<li><a href="about.html">About</a></li>
 			<li><a href="account.html">Account</a></li>
+			<li><a href="login.html">Login</a></li>
 		</ul>
 		<a href="checkout.html"><button class="redButton">Checkout</button></a>
 	</nav>
 	<!-- nav bar end -->
-	<div class="background">
+	<div class="login_background">
 
 	
 	<br>
@@ -181,57 +35,55 @@ table.loginform{
 	<br>
 
 	<!-- page content -->
-	<section class="login">
+	<section class="login_section">
 	<table align="center" class="loginform">
 		<tr>
 			
 	<th>	
-	<form action="account.html">
-		<div class="login">
-		<fieldset>
+	<form action="index.html">
+		<div class="login_divform">
+		<fieldset class="login_fieldset">
 		
-		<table class="title">
+		<table class="login_title">
 			<tr>
 				<td>
 		<legend><h3 align="left">Login</h3></legend>
 	           </td>
 	           <td>
-	           <h5 align="right"><a href="recover.html" class="login">Forget password?</a></h5>
+	           <h5 align="right"><a href="recover.html" class="login_a">Forget password?</a></h5>
 	           </td>
 
             </tr>
         </table>    
 		    
 			
-				<table class="login">
+				<table class="login_text">
                         <tr>
 						
-							<td><input class="login" type="text" id="username" name="username" required placeholder="Username/Account Number"></td>
-						<tr><br></tr>
-						<tr><br></tr>	
+							<td><input class="login_input" type="text" id="username" name="username" required placeholder="Username/Account Number"></td>	
 						
 						<tr>
 						     
-						     <td><input class="login" type="password" id="Password" name="Password" placeholder="password" required></td>
+						     <td><input class="login_input" type="password" id="Password" name="Password" placeholder="password" required></td>
 						</tr>
 						
               </table>
               <br>
               <br>
-              <table class="button">
+              <table class="login_button">
               	<tr>
               		<th>
               <input type="checkbox" name="mem" value="mem">
-              <label for="mem">keep me logged in checkbox</label></th>
+              <label class="login_label" for="mem">keep me logged in checkbox</label></th>
        
              </tr>
                </table>
               
               <input class="sign"type="submit" value="Sign in"><br>
-              <h5 align="center"><a href="register.html" class="login">NO Account? </a></h5>     
+              <h5 align="center"><a href="register.html" class="login_a">NO Account? </a></h5>     
 
 			 </fieldset>
-			 </div class="login">
+			 </div>
               		
 	</form>
 
@@ -240,7 +92,7 @@ table.loginform{
 	</tr>
    </table>
  </section>
-   </div class="background">
+   </div>
 </body>
 
 

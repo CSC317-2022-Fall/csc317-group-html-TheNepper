@@ -19,6 +19,8 @@
 	position: sticky;
 	top: 0;
 	background-color: white;
+	top: expression(documentElement.scrollTop + "px");
+    z-index: 9999;
 }
 
 .navBar ul, .location ul, .product ul {
@@ -169,3 +171,417 @@
 	border-radius: 2em;
 	transition: all 0.3s ease 0s;
 }
+
+.about_title {
+	   background-image: url(images/b2.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-border: 3px solid none;
+        position: relative;
+        height: 350px;
+
+}
+
+.about_center {
+    text-align: center;
+    border: 3px solid white;
+    background-color: white;
+    opacity: 0.7;
+    border-radius: 50%;
+    width: 200px;
+    height: 160px;
+    padding: 20px 30px;
+    left: 20%;
+    position: absolute;
+}
+.about_text{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+.about_side{
+    size: cover;
+    height: 700;
+ 
+}
+.about_info{
+    background-image: url(images/b3.png);
+    background-repeat:no-repeat ;
+    background-size: 100px 95px;
+    background-position: 37% 13%;
+}
+ .about h2{
+    
+    text-shadow: 2px 2px 5px red;
+}
+.about_company{
+    border: 1px solid black;
+    border-radius: 50%;
+    background-color: white;
+    width: 80%;
+    height: 400px;
+    margin: auto;
+
+
+}
+.about_value {
+    border: 10px solid transparent;
+    padding: 15px;
+    border-image: linear-gradient(red, black) 27;
+
+    
+    
+
+}
+.about_img{
+    border: 1px solid white;
+    border-radius: 50%;
+    height: 800px;
+    width: 800px;
+}
+.about p{
+    border: none;
+    width: 70%;
+    height: 70%;
+
+}
+.about_background {
+    background-image:url(images/b6.png) ;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 600px;
+}
+
+
+.about body,html{
+    height: 100%;
+    margin: 0;
+
+
+}
+.about hr{
+    border: 10px solid white;
+
+}
+.table_value{
+  border-spacing: 50px;
+  width: 100%;
+
+}
+
+.account_main{
+	 height: 1000px;
+	 width: 600px;
+	 position: relative;
+	 margin-right:auto ;
+	 margin-left: auto;
+	 
+    }
+.account_main input[type=submit]{
+	background-color: red;
+	opacity: 0.8;
+	border: none;
+	color: black;
+	border: none;
+    border-radius: 2em;
+    padding: 10px;
+}
+
+.account_navbar{
+  	llist-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: 15%;
+  background-color: #ff3333;
+  position: fixed;
+  height: 100%;
+  overflow: auto;
+
+  	
+  }
+  .account_navbar li a {
+  	display: block;
+  color: black;
+  padding: 8px 16px;
+  text-decoration: none;
+  }
+   
+  .account_navbar li a:hover:not(.active){
+  	background-color: darkred;
+  	color: white;
+  }
+  
+
+.account_main input[type=submit]:hover{
+	color: white;
+}
+
+.account_main input[type=text],[type=tel],[type=email],[type=password],[type=date]{
+	border-radius: 10px;
+	background-color: #f1f1f1;
+	border:1px solid black;
+	padding: 10px 20px;
+}
+
+.account_select{
+	width: 200px;
+	background-color: #f1f1f1;
+	border: 1px solid black;
+	border-radius: 10px;
+	padding: 10px 20px;
+}
+
+
+  .account_form{
+  	background-color: white;
+
+  }
+  .account_body {
+  	background-color: rgba(245, 245, 245);
+  	height: 100%;
+	margin: 0;
+  }
+  .account_table{
+    width: 100%;
+  }
+  .account_table th{
+  	height: 70px;
+  }
+
+   .login {
+	height: 100%;
+	margin: 0;
+	}
+
+   .loginform{
+		width: 600px;
+		height: auto;
+		margin-left:auto; 
+    margin-right:auto;
+    padding: 120px 0;
+
+	}
+	.login_button{
+		width: 100%;
+	}
+	.login_text{
+		width: 100%;
+
+	}
+	.login_title{
+		width: 100%;
+		color: black;
+	}
+	.login_a{
+		text-decoration: none;
+		color: black;
+	}
+	.login_fieldset{
+		border: none;
+		padding: 0;
+	}
+	
+
+	.sign{
+		background-color: red;
+		border: none;
+		color:  black;
+		padding: 15px 32px;
+		text-align: center;
+		display: inline-block;
+		border-radius:12px ;
+		width: 80%;
+
+	}
+	.sign:hover{
+		color: white;
+	}
+	.login_input{
+		background-color: white;
+		width: 60%;
+		padding: 10px;
+		border-radius: 12px;
+		border: 2px solid black;
+
+
+	}
+	.login_label{
+		color: black;
+	}
+	.login_divform{
+		background-color: white;
+		opacity: 0.8;
+	}
+	.login_background{
+		background-image: url(images/b1.png);
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: cover;
+		height: 100%;
+		
+	}
+	.login_text td{
+		height: 70px;
+	}
+	
+	.recover_a{
+  color: gray;
+
+}
+
+    .recover_button{
+	background-color: red;
+	opacity: 0.8;
+	border: none;
+	color: black;
+	border: none;
+    border-radius: 2em;
+    padding: 10px 20px;
+}
+
+   .recover_input{
+	border: 1px solid black;
+	border-radius: 12px;
+	padding: 10px 20px;
+	background-color: #f1f1f1;
+	width: 300px;
+}
+
+   .recover_border{
+	border-radius: 5px;
+	width: 500px;
+	height: 400px;
+	vertical-align: middle;
+	background-color: white;
+	border: none;
+
+	
+}
+.recover_background{
+	background-color: #f1f1f1;
+	background-size: cover;
+	height: 100%;
+
+
+}
+.recover_button[type=submit]:hover{
+	color: white;
+}
+.recover_title{
+	font-size: 30px;
+}
+
+.code{
+		 font-size: 70px;
+        width:80px ;
+        height: 80px;
+    text-align: center;
+    flex: 1 0 1em;
+
+	}
+
+.center{
+	margin: auto;
+    width: 500px;
+    border: none;
+    padding: 10px;
+}	
+
+.code_p{
+    color: gray;
+
+}
+.code_a{
+    color: red;
+    text-decoration: none;
+}
+
+.recover_body{
+	padding: 0;
+	height: 100%;
+	margin: 0;
+}
+.success_text{
+   border-radius: 5px;
+	width: 500px;
+	height: 400px;
+	vertical-align: middle;
+	background-color: white;
+	border: none;
+	margin: auto;
+}
+.success_table th{
+	height: 70px;
+}
+
+.register_title{
+	background-image: url(images/b5.png);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	height: 280px;
+
+}
+
+.register_center{
+	border: 3px solid white;
+	background-color: white;
+	opacity: 0.8;
+	border-radius: 50%;
+	width: 300px;
+    height: 150px;
+    padding: 20px 30px;
+    left: 15%;
+    position: absolute;
+    text-align: center;
+    
+}
+
+.register_button{
+	background-color: red;
+	opacity: 0.8;
+	border: none;
+	color: black;
+	border: none;
+    border-radius: 2em;
+    padding: 10px;
+}
+
+.register_button:hover{
+	color: white;
+}
+
+.register_input{
+	border-radius: 10px;
+	background-color: #f1f1f1;
+	border: 1px solid black;
+	padding: 10px 20px;
+}
+
+.register_select{
+	width: 200px;
+	background-color: #f1f1f1;
+	border: 1px solid black;
+	border-radius: 10px;
+	padding: 10px 20px;
+}
+ .register_fieldset{
+    background-color: white;
+
+  }
+  .register{
+    background-color: rgba(245, 245, 245);
+    margin: 0;
+    padding: 0;
+    height: 100%;
+  }
+  .register_table th{
+  	height: 70px;
+
+  }
+  .register_table {
+  	width: 540px;
+  }

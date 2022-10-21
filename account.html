@@ -1,154 +1,12 @@
 <!DOCTYPE html>
 <html>
-<style>
-	<style>
-	 header.nav_flexbox {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    font-family: 'Montserrat', sans-serif;
-}
-
-.logo {
-    width: 100px;
-}
-
-.navBar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 10%;
-    position: sticky;
-    top: 0;
-    background-color: white;
-    top: expression(documentElement.scrollTop + "px");
-    z-index: 9999;
-}
-
-.navBar ul {
-    list-style: none;
-}
-
-.navBar li {
-    display: inline-block;
-    padding: 0 1em;
-    font-size: 20px;
-}
-
-.navBar li a {
-    color: black;
-    text-decoration: none;
-    transition: all 0.3s ease 0s;
-}
-
-.navBar li a:hover {
-    color: white;
-    background-color: black;
-    font-size: 24px;
-}
-
-.redButton {
-    padding: 0.5em 1em;
-    margin: 0.5em 0;
-    background-color: rgb(255, 51, 51);
-    font-size: 20px;
-    cursor: pointer;
-    border: none;
-    border-radius: 2em;
-    transition: all 0.3s ease 0s;
-}
-
-.redButton:hover {
-    color: white;
-}
-
-.topBanner {
-    padding: 5%;
-    text-align: center;
-    color: white;
-    background-color: black;
-    background-image: url(images/background1.jpg);
-    background-size: cover;
-}
-
-
-
-body,html{
-	height: 100%;
-	margin: 0;
-}
-	
-	div.main{
-		 padding: 1px; 16px; height: 1000px;
-
-	}
-	ul.navbar{
-  	llist-style-type: none;
-  margin: 0;
-  padding: 0;
-  width: 15%;
-  background-color: #ff3333;
-  position: fixed;
-  height: 100%;
-  overflow: auto;
-
-  	
-  }
-  ul.navbar li a {
-  	display: block;
-  color: black;
-  padding: 8px 16px;
-  text-decoration: none;
-  }
-   
-  li a:hover:not(.active){
-  	background-color: darkred;
-  	color: white;
-  }
-  input[type=submit]{
-	background-color: red;
-	opacity: 0.8;
-	border: none;
-	color: black;
-	border: none;
-    border-radius: 2em;
-    padding: 10px;
-}
-
-input[type=submit]:hover{
-	color: white;
-}
-
-input[type=text],[type=tel],[type=email],[type=password],[type=date]{
-	border-radius: 10px;
-	background-color: #f1f1f1;
-	border:1px solid black;
-	padding: 10px 20px;
-}
-
-select{
-	width: 200px;
-	background-color: #f1f1f1;
-	border: 1px solid black;
-	border-radius: 10px;
-	padding: 10px 20px;
-}
-
-
-  fieldset{
-  	background-color: white;
-
-  }
-  body{
-  	background-color: rgba(245, 245, 245);
-  }
-</style>	
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Crazy Burger - Account</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
 </head>
-<body>
+<body class="account_body">
 
 	<!-- nav bar -->
    <nav class="navBar">
@@ -159,6 +17,7 @@ select{
 			<li><a href="FAQ.html">FAQ</a></li>
 			<li><a href="about.html">About</a></li>
 			<li><a href="account.html">Account</a></li>
+			<li><a href="login.html">Login</a></li>
 		</ul>
 		<a href="checkout.html"><button class="redButton">Checkout</button></a>
 	</nav>
@@ -167,7 +26,7 @@ select{
 
 	<!-- page content -->
 	
-					<ul class="navbar">
+					<ul class="account_navbar">
 						
 						<li><a href="account.html">Personal Information</a></li>
 					    
@@ -181,77 +40,97 @@ select{
 					
 	
 	
-<div class="main">
-
-	<table align="center">
-		<tr>
-			
-			<td><form>
+<div class="account_main">
+<form>
 				
 				<legend><h3>Personal Information</h3></legend>
-				<fieldset>
-				<table align="center">
-				<tr>
-				<th>	
+				<fieldset class="account_form">
+				    <table class="account_table">
+				    	<tr>
+				    		<th colspan="2">
                 <label for="picture"> Profile Picture</label><br>
 				<img src="images/User.png" alt="user" width="100" height="100"><br>
-				Change: <input type="file" id="picture" name="picture"></th>
-			    </tr>
-			</table>
+				Change: <input type="file" id="picture" name="picture"><br>
+				       </th>
+			         </tr>
+				    <tr>
+				    	<th>
+				   <div class="name">
+						 <label for="fname"> First Name </label>
+						</th>
+						<th>
+						 <label for="lname"> Last Name </label> 
+						</th>
+					   <tr>
+					   	<th>
+						<input type="text" id="fname" name="fname"  required>
+						   </th>
+						   <th>
+						<input type="text" id="lname" name="lname" required>
+						   </th>
+						</tr>   
 
-				<br>
-				<br>
-				<table cellpadding="10" align="center">
-					
 					<tr>
-						<th> <label for="fname"> First Name </label></th>
-						<th> <label for="lname"> Last Name </label> </th>
-					</tr>
-					<tr>
-						<th><input type="text" id="fname" name="fname"  required></th>
-						<th><input type="text" id="lname" name="lname" required></th>
-					</tr>		
-                    <tr>
-                    	<th><label for="birthday">Birthday: </th>
-						<th><input type="date" id="birthday" name="birthday" required></th>
-					</tr>
-					<table align="center">
-                  <tr>
-                  	<th><input type="submit" value="Change"></th>
-                  </tr>
-                  </table>	
+						<th>
+					<label for="birthday">Birthday: 
+					</th>
 
-				</fieldset>
-			</form>
+					   <th>	
+						<input type="date" id="birthday" name="birthday" required>
+					</th>
+				</tr>
+					<tr>
+						<th colspan="2">
+                <input type="submit" value="Change">
+                  </th>
+               </tr>  
+            </table>          
+             
+            </fieldset>   
+
+          
+			 </form>
 				  <br>
 				  <br>
-			<form>
+			   <form>
 				<div id="contact-div">
 			      <legend><h3> Contact</h3></legend>
-			      <fieldset>
-			      <table cellpadding="10" align="center">
-
-					<tr>
-						<th><label for="email"> Email: </label></th>
-						<th><input type="email" id="email" name="email" placeholder="*****@gmail.com" required></th>
+			      <fieldset class="account_form">
+			       <table class="account_table">
+			       	<tr>
+			       		<th>
+                     <label for="email"> Email: </label></th>
+						<th>
+						 <input type="email" id="email" name="email" placeholder="*****@gmail.com" required>
+						</th>
 					</tr>
 					<tr>
-					   <th><label for="tel"> Phone: </label></th>
-					   <th><input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="123-456-7890" required></th>
-					</tr>
-					<div>
+					<th> 
+					   <label for="tel"> Phone: </label></th>
+				   <th>
+					   <input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="123-456-7890" required>
+					</th>
+					</tr>   
 					<tr>
-						<th><label for="streetaddress">Street Address:</label></th>
-						<th><input type="text" id="streetaddress" name="streetaddress" required></th>
+					<th>	
+					<label for="streetaddress">Street Address:</label>
+				  </th>
+				  <th>
+				  	<input type="text" id="streetaddress" name="streetaddress" required>
+				  </th>
+				</tr>
+				   <tr>
+				   	<th>
+					    <label for="city">City:</label>
+					    </th>
+					    <th>	
+					    <input type="text" id="city" name="city" required><br>
+					   </th>
 					</tr>
 					<tr>
-						
-					    <th><label for="city">City:</label></th>
-					    <th><input type="text" id="city" name="city" required></th>
-					</tr>
-					<tr>
-						<th><label for="state">State:</label>
-							<select name="state" id="state">
+						<th>
+					     <label for="state">State:</label>
+							<select name="state" id="state" class="account_select">
                             <option value="Alabama">Alabama</option>
                             <option value="Alaska">Alaska</option>
                             <option value="Arizona">Arizona</option>
@@ -303,21 +182,20 @@ select{
                             <option value="Wisconsin">Wisconsin</option>
                             <option value="Wyoming">Wyoming</option>
                             </select>
-                        </th>
+                         </th>
                          <th>
                          <label for="zipcode">ZipCode:</label>
                         <input type="tel" id="zipcode" name="zipcode" placeholder="12345" pattern="[0-9]{5}"" required><br>
-                       </th>
-                      </tr> 
-					    	
-                 </table>	   
-				
-				<br>
-				<table align="center">
-                  <tr>
-                  	<th><input type="submit" value="Change"></th>
-                  </tr>
-                  </table>	
+                        </th>
+                     </tr>
+                     <tr>
+                     <th colspan="2">	
+				         <input type="submit" value="Change">
+                     </th>
+                    </tr>
+                 </table>
+                  
+                  	
 			</fieldset>
 			</div id="contact-div">
 		</form>
@@ -326,33 +204,46 @@ select{
 
         <form>
         	<div id="account-div">
+
 			<legend><h3>Account Setting</h3></legend>
-				<fieldset>
-					<table cellpadding="10" align="center">
-						<tr>
-							<th><label for="account">Account Number:</label></th>
-							<td>000001</td>
+				<fieldset class="account_form">
+					     <table class="account_table">
+					     	<tr>
+					     		<th>
+							<label for="account">Account Number:</label>
+						      </th>
+						      <th>	
+							  000001
+							  </th>
+							</tr>  
+							<tr>
+								<th>
+						   <label for="username">User Name:</label>
+						   </th>
+						   <th>
+							<input type="text" id="username" name="username" required>
+						   </th>
+						   </tr>
+						   <tr>
+						   <th>
+						     <label for="Password">Password:</label>
+						   </th>  	
+						   <th>
+						     <input type="password" id="Password" name="Password" placeholder="********" required>
+						  </th>
 						</tr>
 						<tr>
-							<th><label for="username">User Name:</label></th>
-							<th><input type="text" id="username" name="username" required></th>
-						<tr>
-						     <th><label for="Password">Password:</label></th>
-						     <th><input type="password" id="Password" name="Password" placeholder="********" required></th>
-						</tr>
-					</table>
-					<table align="center">
-                  <tr>
-                  	<th><input type="submit" value="Change"></th>
-                  </tr>
-                  </table>		     	
+							<th colspan="2">
+							<input type="submit" value="Change">
+					      </th>
+					    </tr> 
+					    </table> 
+
+                 		     	
 				</fieldset>
 			</div id="account-div">
 		</form>	
-	</th class="account">
-</tr>
 
-</table>
 </div>
 <br>
 
