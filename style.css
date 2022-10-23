@@ -19,7 +19,6 @@
 	position: sticky;
 	top: 0;
 	background-color: white;
-	top: expression(documentElement.scrollTop + "px");
     z-index: 9999;
 }
 
@@ -197,29 +196,7 @@
 	justify-items: auto;
 }
 
-.about_title {
-	   background-image: url(images/b2.png);
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-border: 3px solid none;
-        position: relative;
-        height: 350px;
 
-}
-
-.about_center {
-    text-align: center;
-    border: 3px solid white;
-    background-color: white;
-    opacity: 0.7;
-    border-radius: 50%;
-    width: 200px;
-    height: 160px;
-    padding: 20px 30px;
-    left: 20%;
-    position: absolute;
-}
 .about_text{
     box-sizing: border-box;
     margin: 0;
