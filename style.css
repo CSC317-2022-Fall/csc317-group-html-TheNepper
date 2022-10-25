@@ -163,6 +163,7 @@
 .checkoutbackground
 {
 	background-image: url(images/b2.png);
+	background-size: cover;
 }
 
 .checkoutButton{
@@ -214,10 +215,7 @@
     background-size: 100px 95px;
     background-position: 37% 13%;
 }
- .about h2{
-    
-    text-shadow: 2px 2px 5px red;
-}
+
 .about_company{
     border: 1px solid black;
     border-radius: 50%;
@@ -587,3 +585,12 @@
   .register_table {
   	width: 540px;
   }
+
+.faq {
+	padding: 10% 20%;
+	background-color: #ccc;
+	background-image: url(images/b6.png);
+	background-size: cover;
+	color: white;
+	color: ;
+}
