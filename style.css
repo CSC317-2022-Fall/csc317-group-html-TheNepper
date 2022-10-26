@@ -204,6 +204,10 @@
     padding: 0;
     border: none;
 }
+.about_h2{
+    
+    text-shadow: 2px 2px 5px red;
+}
 .about_side{
     size: cover;
     height: 700;
@@ -217,11 +221,11 @@
 }
 
 .about_company{
-    border: 1px solid black;
+     border: 1px solid black;
     border-radius: 50%;
     background-color: white;
     width: 80%;
-    height: 400px;
+    height: 100%;
     margin: auto;
 
 
@@ -252,7 +256,7 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    height: 600px;
+    height: 100%;
 }
 
 
