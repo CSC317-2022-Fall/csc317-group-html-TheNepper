@@ -77,12 +77,33 @@
 }
 
 .location {
-	margin: 2% 5%;
-	align-items: flex-end;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: 1fr 1fr 1fr;
+	background-color: black;
+	background-image: linear-gradient(to right, black, white);
+}
+
+.locationItem {
+	display: flex;
+	align-items: center;
+	padding-left: 40%;
+}
+
+.location li {
+	min-width: 300px;
+	color: white;
+}
+
+.locationHeader {
+	font-size: 24px;
+	font-weight: bold;
 }
 
 .location img {
 	padding: 5% 0;
+	min-width: 400px;
+	max-height: 400px;
 }
 
 .menuItem, .ingredients li, .location div {
@@ -128,7 +149,7 @@
 	border-top: solid black;
 }
 
-.ingredients img, .location img {
+.ingredients img {
 	width: 50%;
 }
 
@@ -197,7 +218,6 @@
 	justify-items: auto;
 }
 
-
 .about_text{
     box-sizing: border-box;
     margin: 0;
@@ -259,7 +279,6 @@
     height: 100%;
 }
 
-
 .about body,html{
     height: 100%;
     margin: 0;
@@ -295,7 +314,7 @@
 }
 
 .account_navbar{
-  	llist-style-type: none;
+  list-style-type: none;
   margin: 0;
   padding: 0;
   width: 15%;
@@ -304,7 +323,6 @@
   height: 100%;
   overflow: auto;
 
-  	
   }
   .account_navbar li a {
   	display: block;
@@ -317,7 +335,6 @@
   	background-color: darkred;
   	color: white;
   }
-  
 
 .account_main input[type=submit]:hover{
 	color: white;
@@ -337,7 +354,6 @@
 	border-radius: 10px;
 	padding: 10px 20px;
 }
-
 
   .account_form{
   	background-color: white;
@@ -388,7 +404,6 @@
 		padding: 0;
 	}
 	
-
 	.sign{
 		background-color: red;
 		border: none;
@@ -596,5 +611,4 @@
 	background-image: url(images/b6.png);
 	background-size: cover;
 	color: white;
-	color: ;
 }
