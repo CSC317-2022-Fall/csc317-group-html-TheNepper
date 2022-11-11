@@ -19,7 +19,10 @@
 			<li><a href="../account.html">Account</a></li>
 			<li><a href="../login.html">Login</a></li>
 		</ul>
-		<a href="../checkout.html"><button class="redButton">Checkout</button></a>
+		<div class="cart">
+			<a href="checkout.html"><img src="../images/cart.png" alt="cart" height="50"></a>
+			<div id="cartAmount" class="cartAmount">0</div>
+		</div>
 	</nav>
 
 	<!-- product -->
@@ -27,8 +30,7 @@
 		<img src="../images/product1.png" alt="burger">
 		<div>
 			<h1>Wild Burger</h1>
-			<p>The burger grants the ability of another random burger on the menu. The effects are completely random and unknown before consumption. The drawback is that the user can gain an unwanted ability that is dangerous. Good Luck!
-			</p>
+			<p>The burger grants the ability of another random burger on the menu. The effects are completely random and unknown before consumption. The drawback is that the user can gain an unwanted ability that is dangerous. Good Luck!</p>
 			<ul>
 				<li>Calories: 500</li>
 				<li>Fat: 20g</li>
@@ -40,7 +42,7 @@
 				<li>Protein: 20g</li>
 			</ul>
 			<h1>$999.99<h1>
-			<a href="../checkout.html"><button class="redButton">Add to Checkout</button></a>
+			<a href="../checkout.html"><button class="redButton">Go to Cart</button></a>
 		</div>
 	</div>
 
@@ -104,12 +106,11 @@
 	</div>
 
 	<!-- footer -->
-	<footer>
-		<div class="footer">
-			<h2>© 2022 Crazy Burger</h2>
-			<a href="#"><button class="redButton">Go to Top</button></a>
-		</div>
-	</footer>
+	<div class="footer">
+		<h2>© 2022 Crazy Burger</h2>
+		<a href="#"><button class="redButton">Go to Top</button></a>
+	</div>
 
 </body>
+<script src="main.js"></script>
 </html>

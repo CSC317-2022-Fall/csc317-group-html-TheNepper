@@ -7,10 +7,9 @@
 	font-family: 'Open Sans', sans-serif;
 }
 
-.logo {
-	width: 100px;
-}
-
+/*
+*		Nav style
+*/
 .navBar {
 	display: flex;
 	justify-content: space-between;
@@ -20,6 +19,27 @@
 	top: 0;
 	background-color: white;
   z-index: 9999;
+}
+
+.logo {
+	width: 100px;
+}
+
+.cart {
+	position: relative;
+}
+
+.cart:hover {
+	font-size: 50px;
+}
+
+.cartAmount {
+	position: absolute;
+	top: -10px;
+	right: -10px;
+	background-color: red;
+	border-radius: 2em;
+	font-size: 20px;
 }
 
 ul {
@@ -57,6 +77,80 @@ ul {
 
 .redButton:hover {
 	background-image: linear-gradient(to right, rgb(255, 51, 51), orange, rgb(255, 51, 51));
+}
+
+/*
+*		Menu Styling
+*/
+.shop {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-template-rows: repeat(4, 1fr);
+	justify-content: center;
+	padding: 2% 20%;
+	gap: 30px;
+}
+
+@media (max-width: 1500px) {
+	.shop {
+		grid-template-columns: repeat(3, 1fr);
+	}
+}
+
+@media (max-width: 1000px) {
+	.shop {
+		grid-template-columns: repeat(2, 1fr);
+	}
+}
+
+@media (max-width: 500px) {
+	.shop {
+		grid-template-columns: 1fr;
+	}
+}
+
+.item {
+	border: 2px solid black;
+	text-align: center;
+	border-radius: 1em;
+	transition: all 0.5s;
+}
+
+.item:hover {
+	color: white;
+	background-color: black;
+	background-image: linear-gradient(black, red, black, black);
+}
+
+.details {
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+	padding: 5%;
+}
+
+.priceQuantity {
+	display: flex;
+	justify-content: space-evenly;
+}
+
+.quantityButtons {
+	display: flex;
+	justify-content: center;
+	gap: 0.5em;
+	font-size: 24px;
+}
+
+.minus, .plus, .item img:hover {
+	cursor: pointer;
+}
+
+.minus {
+	color: red;
+}
+
+.plus {
+	color: green;
 }
 
 .topBanner {
@@ -135,6 +229,7 @@ ul {
 	padding: 20% 20% 0 10%;
 	color: white;
 	background-color: black;
+	background-image: linear-gradient(black, black, black, black, darkred);
 }
 
 .product p {
