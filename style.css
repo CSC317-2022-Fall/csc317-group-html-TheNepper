@@ -19,10 +19,10 @@
 	position: sticky;
 	top: 0;
 	background-color: white;
-    z-index: 9999;
+  z-index: 9999;
 }
 
-.navBar ul, .location ul, .product ul {
+ul {
 	list-style: none;
 }
 
@@ -41,7 +41,7 @@
 .navBar li a:hover {
 	color: white;
 	background-color: black;
-	font-size: 24px;
+	font-size: 30px;
 }
 
 .redButton {
@@ -56,12 +56,13 @@
 }
 
 .redButton:hover {
-	color: white;
+	background-image: linear-gradient(to right, rgb(255, 51, 51), orange, rgb(255, 51, 51));
 }
 
 .topBanner {
-	padding: 5%;
+	padding: 2%;
 	text-align: center;
+	font-size: 50px;
 	color: white;
 	background-color: black;
 	background-image: url(images/background1.jpg);
@@ -73,7 +74,7 @@
 	flex-wrap: wrap;
 	justify-content: center;
 	text-align: center;
-	margin: 2% 15%;
+	padding: 2% 15%;
 }
 
 .location {
@@ -81,7 +82,7 @@
 	grid-template-columns: 1fr 1fr;
 	grid-template-rows: 1fr 1fr 1fr;
 	background-color: black;
-	background-image: linear-gradient(to right, black, white);
+	background-image: linear-gradient(to right, black, grey, black);
 }
 
 .locationItem {
@@ -98,11 +99,12 @@
 .locationHeader {
 	font-size: 24px;
 	font-weight: bold;
+	padding-bottom: 5%;
 }
 
 .location img {
 	padding: 5% 0;
-	min-width: 400px;
+	width: 400px;
 	max-height: 400px;
 }
 
