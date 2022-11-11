@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html>
+    
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Register Form</title>
+	<title>Register Form</title>    
     <link rel="stylesheet" type="text/css" href="style.css">
 </head>
+
 <body class="register">
 	<!-- nav bar -->
     <nav class="navBar">
@@ -19,11 +21,10 @@
             <li><a href="login.html">Login</a></li>
         </ul>
         <div class="cart">
-			<a href="checkout.html"><img src="images/cart.png" alt="cart" height="50"></a>
-			<div id="cartAmount" class="cartAmount">0</div>
-		</div>
+            <a href="checkout.html"><img src="images/cart.png" alt="cart" height="50"></a>
+            <div id="cartAmount" class="cartAmount">0</div>
+        </div>
     </nav>
-
 	<div class="register_title">
 		<br>
 		<br>
@@ -36,39 +37,45 @@
 	</div>	
             <div class="center">
 
-	          <form action="success.html">
+	          <form id="registerform" onsubmit="return validateRegisterForm()" action="login.html">
 				<legend><h3 align="center">Registeration Form</h3></legend>
 				<fieldset class="register_fieldset">
 				<table cellpadding="10" class="register_table">
 					<tr>
-						<th> <label for="fname"> First Name </label></th>
-						<th> <label for="lname"> Last Name </label> </th>
-					</tr>
-					<tr>
-						<th><input type="text" id="fname" name="fname" class="register_input" required></th>
-						<th><input type="text" id="lname" name="lname" class="register_input" required></th>
-					</tr>		
+						<th> <label for="fname"> Name: </label></th>
+					    <th id="border"><input type="text" id="name" name="name" placeholder="FirstName LastName" class="register_input" onkeyup="validateName()">
+                         <span id="name-error" class="span" ></span></th>
+					</tr>	
                     <tr>
                     	<th><label for="birthday">Birthday: </th>
-						<th><input type="date" id="birthday" name="birthday" class="date" class="register_input" required></th>
+						<th><input type="date" id="birthday" name="birthday" class="register_input" onkeyup="validateBirth()">      
+                            <span id="birthday-error" class="span"></span>
 					</tr>
 
 					<tr>
 						<th><label for="email"> Email: </label></th>
-						<th><input type="email" id="email" name="email" placeholder="*****@gmail.com" class="register_input" required></th>
+						<th><input type="email" id="email" name="email" placeholder="*****@gmail.com" class="register_input" onkeyup="validateEmail()">
+                            <span id="email-error" class="span"></span>
+                        </th>
 					</tr>
 					<tr>
 					   <th><label for="tel"> Phone: </label></th>
-					   <th><input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="123-456-7890" class="register_input" required></th>
+					   <th><input type="tel" id="phone" name="phone" placeholder="1234567890" class="register_input" onkeyup="validatePhone()" >
+                           <span id="phone-error" class="span"></span>
+                       </th>
 					</tr>
 					<tr>
 						<th><label for="streetaddress">Street Address:</label></th>
-						<th><input type="text" id="streetaddress" name="streetaddress" class="register_input" required></th>
+						<th><input type="text" id="streetaddress" name="streetaddress" class="register_input" onkeyup="validateStreet()">
+                        <span id="street-error" class="span"></span>
+                       </th>
 					</tr>
 					<tr>
 						
 					    <th><label for="city">City:</label></th>
-					    <th><input type="text" id="city" name="city" class="register_input" required></th>
+					    <th><input type="text" id="city" name="city" class="register_input" onkeyup="validateCity()">
+                         <span id="city-error" class="span"></span>
+                       </th>
 					</tr>
 					<tr>
 						<th><label for="state">State:</label>
@@ -127,16 +134,25 @@
                         </th>
                          <th>
                          <label for="zipcode">ZipCode:</label>
-                        <input type="tel" id="zipcode" name="zipcode" placeholder="12345" pattern="[0-9]{5}" class="register_input" required><br>
+                        <input type="tel" id="zipcode" name="zipcode" placeholder="12345" class="register_input" onkeyup="validateZip()">
+                        <span id="zipcode-error" class="span"></span>
                        </th>
                       </tr> 
 				
 						<tr>
 							<th><label for="username">User Name:</label></th>
-							<th><input type="text" id="username" name="username" class="register_input" required></th>
+							<th><input type="text" id="username" name="username" class="register_input" onkeyup="validateUsername()">
+                                <span id="Username-correct" class="span"></span>
+                                <br>
+                                <span id="Username-error" class="span"></span>
+                            </th>
 						<tr>
 						     <th><label for="Password">Password:</label></th>
-						     <th><input type="password" id="Password" name="Password" placeholder="********" class="register_input" required></th>
+						     <th><input type="password" id="Password" name="Password" placeholder="********" class="register_input" onkeyup="validatePassword()" >
+                                 <span id="password-correct" class="span"></span>
+                                <br>
+                                <span id="password-error" class="span"></span>
+                             </th>
 						</tr>
                         <tr>
                          <th colspan="2">   
@@ -146,14 +162,15 @@
                     </tr>
                   </table>     	
 				</fieldset>	
-            </div>		
-	
-	<!-- footer -->
-	<div class="footer">
-		<h2>© 2022 Crazy Burger</h2>
-		<a href="#"><button class="redButton">Go to Top</button></a>
-	</div>
+            </div>	
+            <script src="formcheck.js"></script>
 
+    <footer>
+        <div class="footer">
+            <h2>© 2022 Crazy Burger</h2>
+            <a href="#"><button class="redButton">Go to Top</button></a>
+        </div>
+    </footer> 
 </body>
 <script src="main.js"></script>
 </html>

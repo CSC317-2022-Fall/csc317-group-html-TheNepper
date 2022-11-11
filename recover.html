@@ -9,7 +9,7 @@
 <body class="recover_body">
 	<!-- nav bar -->
    <nav class="navBar">
-        <a  class="recover_a" href="index.html"><img class="logo" src="images/logo.png" alt="logo"></a>
+        <a href="index.html"><img class="logo" src="images/logo.png" alt="logo"></a>
         <ul>
             <li><a href="index.html">Menu</a></li>
             <li><a href="location.html">Location</a></li>
@@ -19,11 +19,10 @@
             <li><a href="login.html">Login</a></li>
         </ul>
         <div class="cart">
-			<a href="checkout.html"><img src="images/cart.png" alt="cart" height="50"></a>
-			<div id="cartAmount" class="cartAmount">0</div>
-		</div>
+            <a href="checkout.html"><img src="images/cart.png" alt="cart" height="50"></a>
+            <div id="cartAmount" class="cartAmount">0</div>
+        </div>
     </nav>
-
     <div class="recover_background">
 	
 	<br>
@@ -34,7 +33,7 @@
 		<tr>
 	
 	<th>		
-	<form action="code.html">
+	<form action="code.html" onsubmit="return validateEmail()">
 		<legend class="recover_title">Forget Password</legend><br>
 	<fieldset class="recover_border">
 	<br>
@@ -43,7 +42,8 @@
 	<br>
 	<br>	
 	<label for="email"><strong>Enter your email Address:</strong></label><br><br>
-    <input class="recover_input" type="email" id="email" name="email" required><br><br>
+    <input class="recover_input" type="email" id="email" name="email" onkeyup="validateEmail()">
+     <span id="email-error" class="span"></span> <br><br>
     <a href="login.html" class="recover_a">Back to sign in</a><br><br>
     <input class="recover_button" type="submit" value="Sent">
     </form>	
@@ -54,7 +54,7 @@
     </table>
     </div> 	
 </div>
-
+<script src="formcheck.js"></script>
 </body>
 <script src="main.js"></script>
 </html>

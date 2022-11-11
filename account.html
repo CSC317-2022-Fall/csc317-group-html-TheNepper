@@ -5,25 +5,27 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Crazy Burger - Account</title>
 	<link rel="stylesheet" type="text/css" href="style.css">
+	<script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
 </head>
 <body class="account_body">
 
 	<!-- nav bar -->
-   <nav class="navBar">
-		<a href="index.html"><img class="logo" src="images/logo.png" alt="logo"></a>
-		<ul>
-			<li><a href="index.html">Menu</a></li>
-			<li><a href="location.html">Location</a></li>
-			<li><a href="FAQ.html">FAQ</a></li>
-			<li><a href="about.html">About</a></li>
-			<li><a href="account.html">Account</a></li>
-			<li><a href="login.html">Login</a></li>
-		</ul>
-		<div class="cart">
-			<a href="checkout.html"><img src="images/cart.png" alt="cart" height="50"></a>
-			<div id="cartAmount" class="cartAmount">0</div>
-		</div>
-	</nav>
+    <nav class="navBar">
+        <a href="index.html"><img class="logo" src="images/logo.png" alt="logo"></a>
+        <ul>
+            <li><a href="index.html">Menu</a></li>
+            <li><a href="location.html">Location</a></li>
+            <li><a href="FAQ.html">FAQ</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="account.html">Account</a></li>
+            <li><a href="login.html">Login</a></li>
+        </ul>
+        <div class="cart">
+            <a href="checkout.html"><img src="images/cart.png" alt="cart" height="50"></a>
+            <div id="cartAmount" class="cartAmount">0</div>
+        </div>
+    </nav>
+	<!-- nav bar end -->
 
 	<!-- page content -->
 	
@@ -42,34 +44,33 @@
 	
 	
 <div class="account_main">
-<form>
+<form onsubmit="return validatePersonalForm()">
 				
 				<legend><h3>Personal Information</h3></legend>
 				<fieldset class="account_form">
 				    <table class="account_table">
 				    	<tr>
 				    		<th colspan="2">
+				    	<div class="Profile">		
                 <label for="picture"> Profile Picture</label><br>
-				<img src="images/User.png" alt="user" width="100" height="100"><br>
-				Change: <input type="file" id="picture" name="picture"><br>
+              <div class="profile-border" id="profile-border" onmouseenter ="Profile_add()">      
+             <span id="photo_change"><img src="images/User.png" id="profile-photo" onchange ="readURL()"></span>
+             <input type="file" id=file accept="image/*">
+             <label for="file" id="uploadBtn">Choose Photo</label>
+			       </div>
+			     </div>
 				       </th>
 			         </tr>
 				    <tr>
 				    	<th>
 				   <div class="name">
-						 <label for="fname"> First Name </label>
+						 <label for="fname"> Name: </label>
 						</th>
 						<th>
-						 <label for="lname"> Last Name </label> 
+						 <input type="text" id="name" name="name" placeholder="FirstName LastName"  onkeyup="validateName()">
+						 <span id="name-error" class="span" ></span>
 						</th>
-					   <tr>
-					   	<th>
-						<input type="text" id="fname" name="fname"  required>
-						   </th>
-						   <th>
-						<input type="text" id="lname" name="lname" required>
-						   </th>
-						</tr>   
+					   </tr>
 
 					<tr>
 						<th>
@@ -77,24 +78,22 @@
 					</th>
 
 					   <th>	
-						<input type="date" id="birthday" name="birthday" required>
+						<input type="date" id="birthday" name="birthday" onkeyup="validateBirth()">
+						 <span id="birthday-error" class="span"></span>
 					</th>
 				</tr>
 					<tr>
 						<th colspan="2">
+                <div id="contact-div">
                 <input type="submit" value="Change">
                   </th>
                </tr>  
-            </table>          
-             
+            </table>        
             </fieldset>   
-
-          
-			 </form>
+             </form>
 				  <br>
 				  <br>
-			   <form>
-				<div id="contact-div">
+			   <form onsubmit="return validateContactForm()">
 			      <legend><h3> Contact</h3></legend>
 			      <fieldset class="account_form">
 			       <table class="account_table">
@@ -102,14 +101,16 @@
 			       		<th>
                      <label for="email"> Email: </label></th>
 						<th>
-						 <input type="email" id="email" name="email" placeholder="*****@gmail.com" required>
+						 <input type="email" id="email" name="email" placeholder="*****@gmail.com" onkeyup="validateEmail()">
+						 <span id="email-error" class="span"></span>
 						</th>
 					</tr>
 					<tr>
 					<th> 
 					   <label for="tel"> Phone: </label></th>
 				   <th>
-					   <input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="123-456-7890" required>
+					   <input type="tel" id="phone" name="phone" placeholder="1234567890" onkeyup="validatePhone()">
+					   <span id="phone-error" class="span"></span>
 					</th>
 					</tr>   
 					<tr>
@@ -117,7 +118,8 @@
 					<label for="streetaddress">Street Address:</label>
 				  </th>
 				  <th>
-				  	<input type="text" id="streetaddress" name="streetaddress" required>
+				  	<input type="text" id="streetaddress" name="streetaddress" onkeyup="validateStreet()">
+				  	<span id="street-error" class="span"></span>
 				  </th>
 				</tr>
 				   <tr>
@@ -125,7 +127,8 @@
 					    <label for="city">City:</label>
 					    </th>
 					    <th>	
-					    <input type="text" id="city" name="city" required><br>
+					    <input type="text" id="city" name="city" onkeyup="validateCity()">
+					    <span id="city-error" class="span"></span>
 					   </th>
 					</tr>
 					<tr>
@@ -186,43 +189,38 @@
                          </th>
                          <th>
                          <label for="zipcode">ZipCode:</label>
-                        <input type="tel" id="zipcode" name="zipcode" placeholder="12345" pattern="[0-9]{5}"" required><br>
+                        <input type="tel" id="zipcode" name="zipcode" placeholder="12345" onkeyup="validateZip()">
+                        <span id="zipcode-error" class="span"></span>
                         </th>
                      </tr>
+                 </div>
                      <tr>
                      <th colspan="2">	
 				         <input type="submit" value="Change">
                      </th>
                     </tr>
                  </table>
-                  
-                  	
-			</fieldset>
-			</div id="contact-div">
+                  </fieldset>
+			
 		</form>
 			<br>
 			<br>
 
-        <form>
+        <form onsubmit="return validateAccountForm()">
         	<div id="account-div">
 
 			<legend><h3>Account Setting</h3></legend>
 				<fieldset class="account_form">
 					     <table class="account_table">
-					     	<tr>
-					     		<th>
-							<label for="account">Account Number:</label>
-						      </th>
-						      <th>	
-							  000001
-							  </th>
-							</tr>  
-							<tr>
+							 <tr>
 								<th>
 						   <label for="username">User Name:</label>
 						   </th>
 						   <th>
-							<input type="text" id="username" name="username" required>
+							<input type="text" id="username" name="username" onkeyup="validateUsername()">
+							<span id="Username-correct" class="span"></span>
+                            <br>
+                            <span id="Username-error" class="span"></span>
 						   </th>
 						   </tr>
 						   <tr>
@@ -230,7 +228,10 @@
 						     <label for="Password">Password:</label>
 						   </th>  	
 						   <th>
-						     <input type="password" id="Password" name="Password" placeholder="********" required>
+						     <input type="password" id="Password" name="Password" placeholder="********" onkeyup="validatePassword()">
+						      <span id="password-correct" class="span"></span>
+                  <br>
+                  <span id="password-error" class="span"></span>
 						  </th>
 						</tr>
 						<tr>
@@ -247,7 +248,7 @@
 
 </div>
 <br>
-
+<script src="formcheck.js"></script>
 </body>
 <script src="main.js"></script>
 </html>

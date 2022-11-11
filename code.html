@@ -1,5 +1,8 @@
 <!DOCTYPE html>
 <html>	
+<script>
+
+ </script>   
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -19,11 +22,10 @@
             <li><a href="login.html">Login</a></li>
         </ul>
         <div class="cart">
-			<a href="checkout.html"><img src="images/cart.png" alt="cart" height="50"></a>
-			<div id="cartAmount" class="cartAmount">0</div>
-		</div>
+            <a href="checkout.html"><img src="images/cart.png" alt="cart" height="50"></a>
+            <div id="cartAmount" class="cartAmount">0</div>
+        </div>
     </nav>
-
 	<div class="recover_background">
     <br>
     <br>
@@ -33,7 +35,7 @@
 		<tr>
 	
 	<th>		
-	<form action="changepass.html">
+	<form name="verify_form" action="changepass.html">
 		<legend class="recover_title">Verfication</legend><br>
 	<fieldset class="recover_border">
 	<br>
@@ -44,11 +46,12 @@
 	<br>
 	<br>
 	<br>
-    <div>
-      <input type="tel" pattern="[0-9]{1}" name='code' class='code' required/>
-      <input type="tel" pattern="[0-9]{1}" name='code' class='code' required/>
-      <input type="tel" pattern="[0-9]{1}" name='code' class='code' required/>
-      <input type="tel" pattern="[0-9]{1}" name='code' class='code' required/>
+
+    <div class="number-code">
+      <input name='code' class='code-input' maxlength="1" required>
+      <input name='code' class='code-input' maxlength="1" required>
+      <input name='code' class='code-input' maxlength="1" required>
+      <input name='code' class='code-input' maxlength="1" required>
     </div>
     <br>
     <br>
@@ -64,6 +67,7 @@
     </table> 
     <div class="center">
     </div>	
+    <script src="formcheck.js"></script>
 
 </body>
 <script src="main.js"></script>

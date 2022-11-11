@@ -8,10 +8,10 @@
 </head>
 <body class="recover_body">
 	<!-- nav bar -->
-    <nav class="navBar">
+     <nav class="navBar">
         <a href="index.html"><img class="logo" src="images/logo.png" alt="logo"></a>
         <ul>
-           <li><a href="index.html">Menu</a></li>
+            <li><a href="index.html">Menu</a></li>
             <li><a href="location.html">Location</a></li>
             <li><a href="FAQ.html">FAQ</a></li>
             <li><a href="about.html">About</a></li>
@@ -19,11 +19,10 @@
             <li><a href="login.html">Login</a></li>
         </ul>
         <div class="cart">
-			<a href="checkout.html"><img src="images/cart.png" alt="cart" height="50"></a>
-			<div id="cartAmount" class="cartAmount">0</div>
-		</div>
+            <a href="checkout.html"><img src="images/cart.png" alt="cart" height="50"></a>
+            <div id="cartAmount" class="cartAmount">0</div>
+        </div>
     </nav>
-    
     <div class="recover_background">
 	<br>
     <br>
@@ -33,7 +32,7 @@
 		<tr>
 	
 	<th>		
-	<form action="successchange.html">
+	<form action="login.html" onsubmit="return validatePasswordForm()">
 		<legend class="recover_title">New Password</legend><br>
 	<fieldset class="recover_border">
 	<br>
@@ -42,9 +41,13 @@
 	<br>
 	<br>	
 	<label for="Password"><strong>Enter New Password:</strong></label><br><br>
-    <input class="recover_input" type="password" id="Password" name="Password" required><br><br>
-    <label for="Password"><strong>Confirm Password:</strong></label><br><br>
-    <input class="recover_input" type="password" id="Password" name="Password" required><br><br>
+    <input class="recover_input" type="password" id="Password" name="Password" onkeyup="validatePassword()">
+    <span id="password-correct" class="span"></span><br>
+    <span id="password-error" class="span"></span><br><br>
+    <label for="Password2"><strong>Confirm Password:</strong></label><br>
+    <input class="recover_input" type="password" id="Password2" name="Password2" onkeyup="comfirmPassword()">
+     <span id="password2-correct" class="span"></span><br>
+     <span id="password2-error" class="span"></span><br><br>
     
     <input class="recover_button" type="submit" value="Submit">
     </form>	
@@ -55,6 +58,8 @@
     </table> 
     </div>	
 </div>
+<script src="formcheck.js"></script>
+
 
 </body>
 <script src="main.js"></script>

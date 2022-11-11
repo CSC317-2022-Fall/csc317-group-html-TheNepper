@@ -13,24 +13,29 @@
 <body class="login">
 	<!-- nav bar -->
 	<nav class="navBar">
-		<a href="index.html"><img class="logo" src="images/logo.png" alt="logo"></a>
-		<ul>
-			<li><a href="index.html">Menu</a></li>
-			<li><a href="location.html">Location</a></li>
-			<li><a href="FAQ.html">FAQ</a></li>
-			<li><a href="about.html">About</a></li>
-			<li><a href="account.html">Account</a></li>
-			<li><a href="login.html">Login</a></li>
-		</ul>
-		<div class="cart">
-			<a href="checkout.html"><img src="images/cart.png" alt="cart" height="50"></a>
-			<div id="cartAmount" class="cartAmount">0</div>
-		</div>
-	</nav>
-
+        <a href="index.html"><img class="logo" src="images/logo.png" alt="logo"></a>
+        <ul>
+            <li><a href="index.html">Menu</a></li>
+            <li><a href="location.html">Location</a></li>
+            <li><a href="FAQ.html">FAQ</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="account.html">Account</a></li>
+            <li><a href="login.html">Login</a></li>
+        </ul>
+        <div class="cart">
+            <a href="checkout.html"><img src="images/cart.png" alt="cart" height="50"></a>
+            <div id="cartAmount" class="cartAmount">0</div>
+        </div>
+    </nav>
+	<!-- nav bar end -->
 	<div class="login_background">
 
-	<br><br><br><br><br>
+	
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
 
 	<!-- page content -->
 	<section class="login_section">
@@ -38,7 +43,7 @@
 		<tr>
 			
 	<th>	
-	<form action="index.html">
+	<form action="index.html" onsubmit="return validateLoginForm()">
 		<div class="login_divform">
 		<fieldset class="login_fieldset">
 		
@@ -58,11 +63,19 @@
 				<table class="login_text">
                         <tr>
 						
-							<td><input class="login_input" type="text" id="username" name="username" required placeholder="Username/Account Number"></td>	
+							<td><input class="login_input" type="text" id="username" name="username" placeholder= "Username" onkeyup="validateLoginUsername()">
+								<span id="LoginUsername-correct" class="span"></span>
+                 <br>
+                <span id="LoginUsername-error" class="span"></span>
+							</td>	
 						
 						<tr>
 						     
-						     <td><input class="login_input" type="password" id="Password" name="Password" placeholder="password" required></td>
+						     <td><input class="login_input" type="password" id="Password" name="Password" placeholder="Password" onkeyup="validateLoginPassword()">
+						     	 <span id="Loginpassword-correct" class="span"></span>
+                   <br>
+                   <span id="Loginpassword-error" class="span"></span>
+						     </td>
 						</tr>
 						
               </table>
@@ -91,7 +104,8 @@
    </table>
  </section>
    </div>
-	 
+   <script src="formcheck.js"></script>
 </body>
 <script src="main.js"></script>
+
 </html>
