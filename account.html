@@ -53,9 +53,9 @@
 				    		<th colspan="2">
 				    	<div class="Profile">		
                 <label for="picture"> Profile Picture</label><br>
-              <div class="profile-border" id="profile-border" onmouseenter ="Profile_add()">      
-             <span id="photo_change"><img src="images/User.png" id="profile-photo" onchange ="readURL()"></span>
-             <input type="file" id=file accept="image/*">
+              <div class="profile-border" id="profile-border" onmouseenter="Profile_add()">      
+             <img src="images/User.png" id="profile-photo">
+             <input type="file" id="file" accept="image/png, image/jpg" onclick="ChangeFile()">
              <label for="file" id="uploadBtn">Choose Photo</label>
 			       </div>
 			     </div>

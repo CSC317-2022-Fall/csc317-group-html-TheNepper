@@ -303,24 +303,14 @@
             return false;
         }
         }
+
         
 
     function Profile_add(){
        const  imgDiv = document.querySelector('[id="profile-border"]');
-       const  img = document.getElementById('profile-photo');
-       const file = document.querySelector('[id="profile-file"]');
        const uploadBtn = document.querySelector('[id="uploadBtn"]');
        const PhotoChange = document.getElementById('photo_change');
-       function readURL(event) {
-        var activimg = document.getElementsByClassName("activimg");
-         var url = URL.createObjectURL(event.target.files[0]);
-         PhotoChange.innerHTML="<img class=\"output\" src=\"" + url + "\">";
-         
-     }
-}
-   
-
-        imgDiv.addEventListener('mouseenter', function(){
+       imgDiv.addEventListener('mouseenter', function(){
             uploadBtn.style.display = "block";
 
         } );
@@ -328,6 +318,24 @@
         imgDiv.addEventListener('mouseleave', function(){
             uploadBtn.style.display="none";
         });
+
+}
+ function ChangeFile(){
+  const img = document.querySelector('#file');
+    var uploaded_image=" ";
+    img.addEventListener("change", function(){
+        const reader = new FileReader();
+        reader.addEventListener("load",function(){
+            uploaded_image=reader.result;
+            document.getElementById("profile-photo"). src=uploaded_image;
+
+        });
+        reader.readAsDataURL(this.files[0]);
+    });
+}
+
+   
+
 
 
 
