@@ -189,3 +189,21 @@ let calcBasket = () => {
   let cartIcon = document.getElementById("cartAmount");
   cartIcon.innerHTML = (basket.map((x) => x.item).reduce((x,y) => x + y, 0));
 }
+
+function Image_Change(){
+  const images = [];
+  images.push('images/P1.png','images/P2.png','images/P3.png');
+  setInterval(()=>{
+    document.getElementById("myImage").src=images.pop();
+    if(images.length == 0){
+      images.push('images/P1.png','images/P2.png','images/P3.png','images/P4.png');
+    }
+
+  },3000);
+
+}
+
+
+
+
+       

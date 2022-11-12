@@ -6,10 +6,10 @@
 	<title>Crazy Burger - About</title>
     <link rel="stylesheet" type="text/css" href="style.css">
 </head>
-<body class="about">
+<body class="about" onload="Image_Change()">
 
     <!-- nav bar -->
-    <nav class="navBar">
+     <nav class="navBar">
         <a href="index.html"><img class="logo" src="images/logo.png" alt="logo"></a>
         <ul>
             <li><a href="index.html">Menu</a></li>
@@ -20,13 +20,13 @@
             <li><a href="login.html">Login</a></li>
         </ul>
         <div class="cart">
-			<a href="checkout.html"><img src="images/cart.png" alt="cart" height="50"></a>
-			<div id="cartAmount" class="cartAmount">0</div>
-		</div>
+            <a href="checkout.html"><img src="images/cart.png" alt="cart" height="50"></a>
+            <div id="cartAmount" class="cartAmount">0</div>
+        </div>
     </nav>
-
-    <h1 class="topBanner">About US</h1><hr>
-    
+    <!-- top banner -->
+    <h1 class="topBanner">About US</h1>
+    <hr>
     <div class="about_background"> 
  <br>
  <br>
@@ -69,18 +69,20 @@
              
                 <table class="table_value">
                     <tr>
-                        <td class="about_img"><img src="images/b4.png" class="about_img"></td>
+                        <td class="about_img"><img src="images/P4.png" class="about_img" id="myImage" onclick="StopChange()"></td>
                         <th>
                 <div class="about_value">            
                 <h2 align="center" class="about_h2">Our Values</h2>
                 <table align="center" cellpadding="30%" class="value">
                     <tr valign="top" align="center">
-                        <th width="500"><h3>Ingenuity</h3>
+                        <th width="500"><h3 class="value_title">Ingenuity</h3>
+                            <br>
                             <p class="about"><font size="4">
                                 We strive for innovation and evolution. Our food will never stop growing in its potential and awesomeness. We devote ourselves to exploring the unknown in the world of burgers and powers.</font>
                             </p>
                         </th>
-                        <th width="500"><h3>Impact</h3>
+                        <th width="500"><h3 class="value_title">Impact</h3>
+                            <br>
                             <p class="about"><font size="4">
                                 We strive to create unforgettable experiences. Our food will never stop changing our customers' lives. We devote ourselves to forging the wildest and wackiest burgers with tremendous consequences.</font>
                             </p>
@@ -90,13 +92,17 @@
                 </table>  
                 </th>
                 </tr>
-                <table>
-    <!-- footer -->
-    <div class="footer">
-        <h2>© 2022 Crazy Burger</h2>
-        <a href="#"><button class="redButton">Go to Top</button></a>
-    </div>
+                <table>      
+               
+ 
+           
+    <footer>
+        <div class="footer">
+            <h2>© 2022 Crazy Burger</h2>
+            <a href="#"><button class="redButton">Go to Top</button></a>
+        </div>
+    </footer>    
+    <script src="main.js"></script>         
 
 </body>
-<script src="main.js"></script>
 </html>

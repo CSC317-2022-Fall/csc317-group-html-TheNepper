@@ -387,6 +387,11 @@ ul {
     border: 10px solid white;
 
 }
+.value_title{
+	border: 2px solid transparent;
+	width: 100px;
+	border-image: linear-gradient(red, black) 5;
+}
 .table_value{
   border-spacing: 50px;
   width: 100%;
@@ -395,7 +400,7 @@ ul {
 
 .account_main{
 	 height: 1000px;
-	 width: 600px;
+	 width: 700px;
 	 position: relative;
 	 margin-right:auto ;
 	 margin-left: auto;
