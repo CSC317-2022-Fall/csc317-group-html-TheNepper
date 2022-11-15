@@ -176,7 +176,7 @@ ul {
 	grid-template-columns: 1fr 1fr;
 	grid-template-rows: 1fr 1fr 1fr;
 	background-color: black;
-	background-image: linear-gradient(to right, black, grey, black);
+	background-image: linear-gradient(to right, black, black, darkred, black, black);
 }
 
 .locationItem {
@@ -266,6 +266,28 @@ ul {
 	background-color: black;
 }
 
+.FAQ {
+  background-color: #fff;
+  cursor: pointer;
+  padding: 2em;
+  width: 100%;
+  border: none;
+  text-align: left;
+  font-size: 24px;
+}
+
+.active, .FAQ:hover {
+  background-color: #ccc;
+}
+
+.panel {
+  padding: 0 18px;
+  background-color: white;
+  max-height: 0;
+  overflow: hidden;
+	font-size: 24px;
+}
+
 .checkout{
 	margin: 5% 25%;
 	width: 50%;
@@ -282,6 +304,7 @@ ul {
 {
 	background-image: url(images/b2.png);
 	background-size: cover;
+	background-image: linear-gradient(to right, black, darkred, black);
 }
 
 .checkoutButton{
@@ -417,7 +440,6 @@ ul {
 }
 
 .account_navbar{
-  	llist-style-type: none;
   margin: 0;
   padding: 0;
   width: 15%;
