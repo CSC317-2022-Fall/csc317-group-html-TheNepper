@@ -18,7 +18,7 @@ let generateCartItems = () => {
         let search = shopItemsData.find((y) => y.id == id) || [];
         return `
       <div class="cart-item">
-        <img width="100" src=${search.img} alt="" />
+        <img width="150" src=${search.img} alt="" />
         <div class="details">
           <div class="title-price-x">
               <h4 class="title-price">
@@ -118,8 +118,8 @@ let TotalAmount = () => {
       .reduce((x, y) => x + y, 0);
     // console.log(amount);
     label.innerHTML = `
-    <h2>Total Bill : $ ${amount}</h2>
-    <button class="greenButton">Checkout</button>
+    <h2 style = "color:white">Total Bill : $ ${amount}</h2>
+    <a href = "checkoutInfo.html"> <button class="greenButton">Checkout</button></a>
     <button onclick="clearCart()" class="redButton">Clear Cart</button>
     `;
   } else return;

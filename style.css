@@ -316,7 +316,8 @@ ul {
   border: 2px solid #212529;
   border-radius: 5px;
   display: flex;
-	background-color: white;
+  background-color: white;
+  width: 120%;
 }
 
 .title-price-x {
@@ -346,7 +347,12 @@ ul {
   overflow: hidden;
 	font-size: 24px;
 }
-
+.checkout{
+	display: flexbox;
+	justify-content: center;
+	margin: 5% 31%;
+	width: 40%;
+}
 .checkoutContent{
 	border-radius: 2%;
 	border-width: 7px;
