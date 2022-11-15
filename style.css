@@ -295,6 +295,7 @@ ul {
 .text-center {
   text-align: center;
   margin-bottom: 20px;
+  padding-top: 2%;
 }
 
 /**
@@ -317,7 +318,6 @@ ul {
   border-radius: 5px;
   display: flex;
   background-color: white;
-  width: 120%;
 }
 
 .title-price-x {
