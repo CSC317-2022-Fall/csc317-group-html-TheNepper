@@ -64,7 +64,7 @@ ul {
 	font-size: 30px;
 }
 
-.redButton {
+.redButton, .greenButton {
 	padding: 0.5em 1em;
 	margin: 0.5em 0;
 	background-color: rgb(255, 51, 51);
@@ -75,12 +75,21 @@ ul {
 	transition: all 0.3s ease 0s;
 }
 
+.greenButton {
+	background-color: rgb(64, 255, 0);
+	margin-right: 5%;
+}
+
 .redButton:hover {
 	background-image: linear-gradient(to right, rgb(255, 51, 51), orange, rgb(255, 51, 51));
 }
 
+.greenButton:hover {
+	font-weight: bold;
+	font-size: 22px;
+}
 /*
-*		Menu Styling
+*		Menu Style
 */
 .shop {
 	display: grid;
@@ -266,6 +275,9 @@ ul {
 	background-color: black;
 }
 
+/*
+*		FAQ style
+*/
 .FAQ {
   background-color: #fff;
   cursor: pointer;
@@ -273,24 +285,66 @@ ul {
   width: 100%;
   border: none;
   text-align: left;
-  font-size: 24px;
+  font-size: 20px;
 }
 
 .active, .FAQ:hover {
   background-color: #ccc;
 }
 
+.text-center {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/**
+* ! style rules for shopping-cart
+**/
+
+.shopping-cart {
+  display: grid;
+  grid-template-columns: repeat(1, 320px);
+  justify-content: center;
+  gap: 15px;
+}
+
+/**
+* ! style rules for cart-item
+**/
+
+.cart-item {
+  border: 2px solid #212529;
+  border-radius: 5px;
+  display: flex;
+	background-color: white;
+}
+
+.title-price-x {
+  width: 195px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  /* border: 2px solid red; */
+}
+
+.title-price {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.cart-item-price {
+  background-color: #212529;
+  color: white;
+  border-radius: 4px;
+  padding: 3px 6px;
+}
 .panel {
   padding: 0 18px;
   background-color: white;
   max-height: 0;
   overflow: hidden;
 	font-size: 24px;
-}
-
-.checkout{
-	margin: 5% 25%;
-	width: 50%;
 }
 
 .checkoutContent{

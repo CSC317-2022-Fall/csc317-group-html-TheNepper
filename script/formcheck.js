@@ -333,11 +333,3 @@
         reader.readAsDataURL(this.files[0]);
     });
 }
-
-   
-
-
-
-
-
-       

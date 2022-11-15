@@ -72,9 +72,3 @@ let calcBasket = () => {
 }
 
 calcBasket();
-
-
-
-
-
-       
