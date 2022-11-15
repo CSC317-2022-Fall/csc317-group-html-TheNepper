@@ -746,22 +746,6 @@ ul {
   	font-size: 14px;
   	color: red;
   }
-  .code-input{
-  	 padding: var(--spacing);
-    border-radius: calc(var(--spacing) / 2);
-    color: var(--text1);
-    background: var(--background1);
-    border: 0;
-    border: 1px solid black;
-    &:invalid {
-      box-shadow: none;
-    }
-    &:focus{
-      outline: none;
-      border: 4px solid var(--brand1);
-      background: var(--background3);
-    }
-  }
   .code-input {
     font-size: 1.5em;
     width: 3em;
@@ -770,15 +754,7 @@ ul {
     border-radius: 5px;
   }
   
-  .number-code {
-  // overflow: auto;
-  > div {
-    display: flex;
-    > input:not(:last-child) {
-      margin-right: calc(var(--spacing) * 2);
-    }
-  }
-}
+ 
 .Profile{
 	position: sticky;
 	height: 200px;
