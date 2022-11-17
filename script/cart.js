@@ -41,7 +41,7 @@ let generateCartItems = () => {
   } else {
     ShoppingCart.innerHTML = ``;
     label.innerHTML = `
-    <h2>Cart is Empty</h2>
+    <h2 style = "color:white">Cart is Empty</h2>
     <a href="index.html">
       <button class="redButton">Back to home</button>
     </a>
