@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Crazy Burger - Menu</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+
+	<!-- nav bar -->
+	<nav class="navBar">
+		<a href="/"><img class="logo" src="images/logo.png" alt="logo"></a>
+		<ul>
+			<li><a href="/">Menu</a></li>
+			<li><a href="/product">Product Page</a></li>
+			<li><a href="/location">Location</a></li>
+			<li><a href="/FAQ">FAQ</a></li>
+			<li><a href="/about">About</a></li>
+			<li><a href="/account">Account</a></li>
+			<li><a href="/login">Login</a></li>
+		</ul>
+		<a href="/cart"><img src="images/cart.png" alt="cart" height="50"></a>
+	</nav>
+
+	<h1 class="topBanner">Crazy Burger Menu</h1>
+
+	<!-- product grid layout -->
+	<div class="products_container">
+		<% result.forEach(function(item) { %>
+			<div class="item">
+				<img src="<%=item.image%>" alt="burger" width="400"/>
+				<h1><%= item.name %></h1>
+
+				<% if (item.sale_price) { %>
+					<h2 style="text-decoration:line-through">$ <%= item.price %></h2>
+					<h1 style="color:green">$ <%= item.sale_price %></h1>
+				<% } else { %>
+					<h2>$ <%= item.price %></h2>
+				<% } %>
+
+				<form action="/add_to_cart" method="post">
+					<input type="hidden" name="id" value="<%= item.id %>">
+					<input type="hidden" name="name" value="<%= item.name %>">
+					<input type="hidden" name="price" value="<%= item.price %>">
+					<input type="hidden" name="sale_price" value="<%= item.sale_price %>">
+					<input type="hidden" name="quantity" value="1">
+					<input type="hidden" name="image" value="<%= item.image %>">
+					<input type="submit" value="Add to cart" class="redButton">
+				</form>
+			</div>
+		<% }) %>
+	</div>
+
+	<!-- footer -->
+	<div class="footer">
+		<div>
+			<h2>© 2022 Crazy Burger</h2>
+			<h2>United States</h2>
+			<a href="#"><button class="redButton">Go to Top</button></a>
+		</div>
+		<div>
+			<h2>Contact Us</h2>
+			<h2>Email: crazyburger333@gmail.com</h2>
+			<h2>Phone: 415-333-3333</h2>
+		</div>
+	</div>
+
+</body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Crazy Burger - Cart</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+
+  <!-- nav bar -->
+	<nav class="navBar">
+		<a href="/"><img class="logo" src="images/logo.png" alt="logo"></a>
+		<ul>
+			<li><a href="/">Menu</a></li>
+			<li><a href="/product">Product Page</a></li>
+			<li><a href="/location">Location</a></li>
+			<li><a href="/FAQ">FAQ</a></li>
+			<li><a href="/about">About</a></li>
+			<li><a href="/account">Account</a></li>
+			<li><a href="/login">Login</a></li>
+		</ul>
+		<a href="/cart"><img src="images/cart.png" alt="cart" height="50"></a>
+	</nav>
+
+	<h1 class="topBanner">Your Cart</h1>
+
+  <!-- cart -->
+	<div class="cart_label">
+		<h2>Product</h2>
+		<h2>Quantity</h2>
+		<h2>Subtotal</h2>
+	</div>
+
+	<div class="checkout">
+		<% cart.forEach(function(item) { %>
+			
+			<div>
+				<img src="<%=item.image%>" alt="burger" width="200">
+				<h1><%= item.name %></h1>
+				<form method="post" action="/remove_product">
+					<input type="hidden" name="id" value="<%= item.id %>">
+					<input type="submit" name="remove_btn" class="redButton" value="remove">
+				</form>
+			</div>
+
+			<div>
+				<form method="post" action="/edit_product_quantity">
+					<input type="hidden" name="id" value="<%= item.id %>">
+					<input type="submit" name="increase_product_quantity" class="greenButton" value="+"><br>
+					<input type="text" name="quantity" value="<%= item.quantity %>" readonly>
+					<input type="submit" name="decrease_product_quantity" class="redButton" value="-">
+				</form>
+			</div>
+	
+			<div>
+				<% if (item.sale_price) { %>
+					<h2>Unit Cost: $ <%= item.sale_price %></h2>
+					<h2>Amount: <%= item.quantity %></h2>
+					<h2>Cost: $ <%= item.sale_price * item.quantity %></h2>
+				<% } else { %>
+					<h2>Unit Cost: $ <%= item.price %></h2>
+					<h2>Amount: <%= item.quantity %></h2>
+					<h2>Cost: $ <%= item.price * item.quantity %></h2>
+				<% } %>
+			</div>
+
+		<% }) %>
+	</div>
+
+	<div class="total_container">
+		<h1 class="total">Total: $ <%= total %></h1>
+		<% if (total != 0) { %>
+			<form method="get" action="/checkout">
+				<input type="submit" class="redButton" value="Checkout" name="">
+			</form>
+		<% } %>
+	</div>
+
+</body>
+</html>
