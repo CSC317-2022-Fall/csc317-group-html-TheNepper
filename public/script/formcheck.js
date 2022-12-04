@@ -1,3 +1,4 @@
+        
         var nameError= document.getElementById('name-error');
         var birthError= document.getElementById('birthday-error');
         var emailError= document.getElementById('email-error');
@@ -158,8 +159,8 @@
                 return false;
             }
 
-            if(!password.match(/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[^a-zA-Z0-9])(?!.*\s).{8,15}$/)){
-                passwordError.innerHTML='The password should between 8 to 15 characters which contain at least one lowercase letter, one uppercase letter, one numeric digit and one special character';
+            if(password.length < 8){
+                passwordError.innerHTML='The password should at least 8 characters';
                 passwordCorrect.innerHTML='';
                 return false;
 
@@ -180,39 +181,6 @@
         }
         alert('Congralation! You have successed create a new account, click OK and back to login your account.');
         
-        }
-
-        const form = document.querySelector('[name="verify_form"]');
-        const inputs = form.querySelectorAll('.number-code input');
-
-        form.addEventListener('input', NextInput);
-        form.addEventListener('keydown', DeleteInput);
-        inputs[0].addEventListener('paste', PasteInput);
-
-        function NextInput(e){
-
-            const input = e.target;
-
-            if(input.nextElementSibling && input.value){
-            input.nextElementSibling.focus();
-            }
-        }
-
-        function DeleteInput(e){
-            const input = e.target;
-            if(input.previousElementSibling && e.keyCode === 8){
-                input.value='';
-                input.previousElementSibling.focus();
-
-            }
-
-        }
-        function PasteInput(e){
-            const paste = e.clipboardData.getData('text');
-            inputs.forEach((input,i)=>{
-                console.log(input);
-                input.value=paste[i];
-            });
         }
 
         function comfirmPassword(){
@@ -258,14 +226,6 @@
             return false;
         }
         alert('You succeessful change your Contact Information! ');
-        }
-
-        function validateAccountForm(){
-        if (!validateUsername() || !validatePassword()){
-            alert('Account Information Change failure. Please change them with right format. Thank you. ');
-            return false;
-        }
-        alert('You succeessful change your Account Information! ');
         }
 
          function validateLoginUsername(){
@@ -333,3 +293,4 @@
         reader.readAsDataURL(this.files[0]);
     });
 }
+

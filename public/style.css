@@ -468,17 +468,32 @@ ul {
 
   	
   }
-  .account_navbar li a {
-  	display: block;
+ .account_navbar_title {
+  display: block;
   color: black;
   padding: 8px 16px;
   text-decoration: none;
   }
    
-  .account_navbar li a:hover:not(.active){
+  .account_navbar_title:hover:not(.active){
   	background-color: darkred;
   	color: white;
   }
+   
+ .Logout {
+  	background-color: #ff3333;
+  	border: none;
+  	position: absolute;
+  	left: 20px;
+  	font-size: 16px;
+  	padding: 8px 16px;
+    text-decoration: none;
+  }
+  
+  .Logout:hover:not(.active){
+  	background-color: darkred;
+  	color: white;
+  }  
   
 
 .account_main input[type=submit]:hover{

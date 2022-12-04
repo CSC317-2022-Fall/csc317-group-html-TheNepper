@@ -1,13 +1,32 @@
 const express = require('express');
 const ejs = require('ejs');
 const bodyParser = require('body-parser');
+ const bcrypt = require('bcrypt');
+ var cookieParser = require('cookie-parser');
 const mysql = require('mysql');
 const session = require('express-session');
+const cors = require('cors');
+ const alert = require("alert");
+
 
 const app = express();
 
 app.use(express.static('public'));
+app.use(cookieParser());
+app.use(cors())
 app.set('view engine', 'ejs');
+
+
+var con = mysql.createConnection({
+    host : 'localhost',
+    user : 'root',
+    password : '',
+    database : 'node_project',
+    dateStrings: true
+});
+  
+
+
 
 app.listen('8080');
 app.use(bodyParser.urlencoded({extended:true}));
@@ -25,16 +44,210 @@ app.get('/about', function(req,res) {
 app.get('/account', function(req,res) {
   res.render('pages/account');
 })
+
+app.get('/accountinput', (req, res)=>{
+   const id = req.cookies['users'];
+  if(id != null){
+    const sql = "SELECT * FROM User_Information where id=?";
+
+        con.query(sql, id, function(err, rows){
+          const Userdata = rows[0];
+          res.status(200).json(Userdata);
+
+        })
+}
+})
+app.post('/account_personalInfo', (req, res)=>{
+  const id = req.cookies['users'];
+  if(id != null){
+  const sql = "UPDATE User_Information SET Photo= ?, name=?, birthday=? where id=?";
+  con.query(
+        sql,
+        [req.body.Photo, req.body.name, req.body.birthday, id],
+        (err, res)=>{
+          if(err) throw (err);
+          console.log("Update the Personal Information sucessfully");
+        }
+    )
+}
+})
+
+app.post('/account_ContactInfo', (req, res)=>{
+  const id = req.cookies['users'];
+  if(id != null){
+  const sql = "UPDATE User_Information SET email=?, phone= ?, streetaddress=?, city=?, state=?, zipcode=? WHERE id = ?"; 
+  con.query(
+          sql,
+          [req.body.email,req.body.phone,req.body.streetaddress,req.body.city,req.body.state,req.body.zipcode, id],
+          (err, res)=>{
+           if (err) throw err;
+           console.log("Update the contact Information sucessfully");
+          }
+          )
+
+
+}else{
+  alert("You must login your acccunt first");
+}
+})
+
+app.post('/account_UserInfo', (req, res)=>{
+  const id = req.cookies['users'];
+  if(id != null){
+    let password = req.body.Password;
+    console.log(password);
+    if(password.length === 0){
+       const sql = "UPDATE User_Information SET username=? WHERE id = ?";
+        con.query(
+          sql,
+          [req.body.username, id],
+          (err, res)=>{
+           if (err) throw err;
+           alert("Update the User Information sucessfully");
+          }
+          )
+    }else if(password.length < 8 && password.length > 0){
+   
+    alert('The password need to at least 8 characters');
+  }else{
+
+    bcrypt.genSalt(10, (err, salt)=>{
+      bcrypt.hash(req.body.Password, salt, function(err, hash){
+         req.body.Password = hash;
+         console.log(hash);
+         const sql = "UPDATE User_Information SET username=?, Password = ? WHERE id = ?";
+         con.query(
+          sql,
+          [req.body.username, req.body.Password, id],
+          (err, res)=>{
+           if (err) throw err;
+           alert("Update the User Information sucessfully");
+          }
+          )
+        
+      });
+    });
+  }
+
+
+  }else{
+    alert("You must login your acccunt first")
+  }
+})
+
+app.post('/logout',(req,res)=>{
+   res.clearCookie('users');
+   console.log('The user logout sucessfully');
+   res.redirect('/login');
+})
+app.get('/register', (req, res)=>{
+  res.render('pages/register');
+})
+app.post('/register', (req, res)=>{
+  bcrypt.genSalt(10, (err, salt)=>{
+      bcrypt.hash(req.body.Password, salt, function(err, hash){
+         req.body.Password = hash;
+         const userDetails= req.body;
+         var sql = "INSERT INTO User_Information SET ?";
+
+        con.query(sql ,userDetails ,function (err, result) {
+       if (err) throw err;
+        console.log("1 record inserted");
+
+      });
+        
+      });
+    });
+  
+  res.redirect('login');
+})
 app.get('/login', function(req,res) {
   res.render('pages/login');
 })
+app.post('/login', (req, res)=>{
+  const Username = [req.body.username];
+  const sql = "SELECT id, password FROM User_Information where username=?";
+
+
+  con.query(sql, Username, function(err, rows){
+    if(rows.length != 0){
+      console.log(rows);
+      const id = rows[0]['id'];
+      var password_hash = rows[0]['password'];
+      bcrypt.compare(req.body.Password, password_hash, function(err, result){
+        if(result){
+           console.log('The password is match');
+           res.cookie('users', id, {maxAge: 360000});
+           res.redirect('account');
+        }else{
+          alert("password not match");
+        }
+      });
+    }else{
+          alert("Username or password are not existed");
+    }
+  });
+})
+
+app.post('/enterEmail', (req, res)=>{
+  const email = [req.body.email];
+  const sql = "SELECT id FROM User_Information where email=?";
+
+  con.query(sql, email, (err, rows)=>{
+    if(rows.length != 0){
+      console.log(rows);
+      const id = rows[0]['id'];
+      res.cookie('id', id);
+      res.redirect('code');
+    }else{
+      alert("The email didn't existed ")
+    }
+  })
+})
+
+app.get('/code', function(req,res) {
+  res.render('pages/code');
+})
+
+app.post('/code', (req,res)=>{
+  res.redirect('changepass');
+})
+
+app.get('/changepass', function(req,res) {
+  res.render('pages/changepass');
+})
+
+app.post('/changepass', (req, res)=>{
+  const id = req.cookies['id'];
+   bcrypt.genSalt(10, (err, salt)=>{
+      bcrypt.hash(req.body.Password, salt, function(err, hash){
+         req.body.Password = hash;
+         const sql2 = "UPDATE User_Information SET Password = ? WHERE id = ?";
+         con.query(
+          sql2,
+          [req.body.Password, id],
+          (err, res)=>{
+           if (err) throw err;
+           console.log("Update the password");
+          }
+          )
+        
+      });
+    });
+  res.clearCookie('id');
+  res.redirect('login');
+
+})
+
+
 app.get('/product', (req, res) => {
 
   var con = mysql.createConnection({
     host : 'localhost',
     user : 'root',
     password : '',
-    database : 'node_project'
+    database : 'node_project',
+    dateStrings: true
   })
 
   con.query('SELECT * FROM products', (err, result) => {
@@ -43,12 +256,8 @@ app.get('/product', (req, res) => {
   })
 
 });
-app.get('/changepass', function(req,res) {
-  res.render('pages/changepass');
-})
-app.get('/code', function(req,res) {
-  res.render('pages/code');
-})
+
+
 app.get('/recover', function(req,res) {
   res.render('pages/recover');
 })
@@ -87,7 +296,8 @@ app.get('/', (req, res) => {
     host : 'localhost',
     user : 'root',
     password : '',
-    database : 'node_project'
+    database : 'node_project',
+    dateStrings: true
   })
 
   con.query('SELECT * FROM products', (err, result) => {

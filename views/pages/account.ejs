@@ -7,7 +7,7 @@
 	<link rel="stylesheet" type="text/css" href="style.css">
 	<script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
 </head>
-<body class="account_body">
+<body class="account_body" onload="filledInputFilled()">
 
 	<!-- nav bar -->
 	<nav class="navBar">
@@ -28,20 +28,23 @@
 	
 					<ul class="account_navbar">
 						
-						<li><a href="/account">Personal Information</a></li>
+						<li><a href="/account" class="account_navbar_title">Personal Information</a></li>
 					    
 					  
-					    <li><a href="/account#contact-div">Contact Information</a></li>
+					    <li><a href="/account#contact-div" class="account_navbar_title">Contact Information</a></li>
 					    
 					 
-					    <li><a href="/account#account-div">Account Setting</a></li>
+					    <li><a href="/account#account-div" class="account_navbar_title">Account Setting</a></li>
+
+					    <li><form action="/logout" method="POST">
+					    	<input type = "submit" value="Logout" class="Logout"></form></li>
 					    
 					 </ul>  
 					
 	
 	
 	<div class="account_main">
-	<form onsubmit="return validatePersonalForm()">
+	<form onsubmit="return validatePersonalForm()" action='/account_personalInfo' method="POST">
 					
 					<legend><h3>Personal Information</h3></legend>
 					<fieldset class="account_form">
@@ -52,7 +55,7 @@
 									<label for="picture"> Profile Picture</label><br>
 								<div class="profile-border" id="profile-border" onmouseenter="Profile_add()">      
 							<img src="images/User.png" id="profile-photo">
-							<input type="file" id="file" accept="image/png, image/jpg" onclick="ChangeFile()">
+							<input type="file" id="file" accept="image/png, image/jpg" name="Photo" onclick="ChangeFile()">
 							<label for="file" id="uploadBtn">Choose Photo</label>
 							</div>
 						</div>
@@ -64,7 +67,7 @@
 							<label for="fname"> Name: </label>
 							</th>
 							<th>
-							<input type="text" id="name" name="name" placeholder="FirstName LastName"  onkeyup="validateName()">
+							<input type="text" id="name" name="name" placeholder="First Last"  onkeyup="validateName()">
 							<span id="name-error" class="span" ></span>
 							</th>
 							</tr>
@@ -90,7 +93,7 @@
 							</form>
 						<br>
 						<br>
-					<form onsubmit="return validateContactForm()">
+					<form onsubmit="return validateContactForm()" action='/account_ContactInfo' method="POST">
 							<legend><h3> Contact</h3></legend>
 							<fieldset class="account_form">
 							<table class="account_table">
@@ -203,7 +206,7 @@
 				<br>
 				<br>
 
-					<form onsubmit="return validateAccountForm()">
+					<form action='/account_UserInfo' method="POST">
 						<div id="account-div">
 
 				<legend><h3>Account Setting</h3></legend>
@@ -245,5 +248,6 @@
 	</div>
 
 <script src="script/formcheck.js"></script>
+<script src="script/accountInput.js"></script>
 </body>
 </html>

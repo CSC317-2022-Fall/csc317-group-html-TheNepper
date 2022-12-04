@@ -38,7 +38,7 @@
 		<tr>
 			
 	<th>	
-	<form action="/" onsubmit="return validateLoginForm()">
+	<form action='/login' method= "POST">
 		<div class="login_divform">
 		<fieldset class="login_fieldset">
 		
@@ -58,7 +58,7 @@
 				<table class="login_text">
                         <tr>
 						
-							<td><input class="login_input" type="text" id="username" name="username" placeholder= "Username" onkeyup="validateLoginUsername()">
+							<td><input class="login_input" type="text" id="username" name="username" placeholder= "Username">
 								<span id="LoginUsername-correct" class="span"></span>
                  <br>
                 <span id="LoginUsername-error" class="span"></span>
@@ -66,7 +66,7 @@
 						
 						<tr>
 						     
-						     <td><input class="login_input" type="password" id="Password" name="Password" placeholder="Password" onkeyup="validateLoginPassword()">
+						     <td><input class="login_input" type="password" id="Password" name="Password" placeholder="Password">
 						     	 <span id="Loginpassword-correct" class="span"></span>
                    <br>
                    <span id="Loginpassword-error" class="span"></span>
@@ -100,6 +100,5 @@
  </section>
    </div>
 
-   <script src="script/formcheck.js"></script>
 </body>
 </html>
