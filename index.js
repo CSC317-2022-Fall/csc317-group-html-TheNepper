@@ -286,6 +286,8 @@ function calculateTotal(cart, req) {
       total += cart[i].price * cart[i].quantity;
     }
   }
+  total = total * 1.1;
+  total = total.toFixed(2);
   req.session.total = total;
   return total;
 }
