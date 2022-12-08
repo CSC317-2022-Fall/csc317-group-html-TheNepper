@@ -177,7 +177,7 @@ app.post('/login', (req, res)=>{
       bcrypt.compare(req.body.Password, password_hash, function(err, result){
         if(result){
            console.log('The password is match');
-           res.cookie('users', id, {maxAge: 360000});
+           res.cookie('users', id);
            res.redirect('account');
         }else{
           alert("password not match");
